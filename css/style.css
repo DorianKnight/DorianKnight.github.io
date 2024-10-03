@@ -9,6 +9,10 @@
     --light-color: #f4f4f6;
     --dark-color: #111;
     --container-size: 1600px;
+    --header-font-size: 64px;
+    --header-font-weight: 600;
+    --subheader-font-size: 50px;
+    --subheader-font-weight: 400;
 }
 
 body {
@@ -84,16 +88,15 @@ img {
     padding: 0 15px;
 }
 
-.main-image {
-    height: 600px;
-    background-image: url("/images/pen-on-paper.jpg");
-    background-size: var(--container-size);
-    background-position: right;
+.container-binary {
+    max-width: var(--container-size);
+    margin: 0 auto;
+    column-count: 2;
 }
 
 .landing-name {
     font-size: 80px;
-    font-weight: 600;
+    font-weight: var(--header-font-weight);
     color: #000;
     position: relative;
     top: 20%;
@@ -117,13 +120,78 @@ img {
     padding: 50px;
 }
 
+.header {
+    font-size: 64px;
+    font-weight: var(--header-font-weight);
+    text-align: center;
+    position: relative;
+    padding: 60px 60px;
+}
+
+.carre {
+    position: relative;
+    padding: 30px 15px;
+}
+
+.carre-pic {
+    max-height: 500px;
+    transition: 0.6s;
+}
+
+.carre:hover .carre-pic {
+    opacity:0.2;
+}
+
+.carre .image-content-header {
+    position: absolute;
+    color: var(--dark-color);
+    font-size: var(--subheader-font-size);
+    font-weight: var(--subheader-font-weight);
+    top:30%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.carre:hover .image-content-header {
+    opacity:1;
+}
+
+.carre .image-content-desc {
+    position: absolute;
+    color: var(--dark-color);
+    font-size: 30px;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-wrap: wrap;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.carre:hover .image-content-desc {
+    opacity:1;
+}
+
+.main-image {
+    height: 600px;
+    background-image: url("/images/pen-on-paper.jpg");
+    background-size: var(--container-size);
+    background-position: right;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
     padding: 13px 20px;
     background: var(--light-color);
     color: #333;
-    font-weight: 600;
+    font-weight: var(--header-font-weight);
     text-decoration: none;
     border: none;
     border-radius: 10px;
@@ -154,7 +222,7 @@ img {
 .text-xxl {
     font-size: 3rem;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: var(--header-font-weight);
     margin: 40px, 0 20px;
 }
 
