@@ -4,13 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorian Knight Resume</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/resume.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <div>Resume website here</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/images/favicon.ico" alt="logo">
+                </a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-primary" href="#">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page banner -->
+    <div class="resume_page_header">
+        <div class="page_title">
+            <h1>Resume</h1>
+        </div>
+    </div>
+    <div class="resume-divider">
+        <h1>Experience<h1>
+    </div>
+    <div class="experience_container L3">
+        <div class="wallpaper_image L3_img"></div>
+        <div class="experience_desc L3_experience">
+            <div class="job_title">
+                Embedded Software <br> and Dev-Ops Developer
+            </div>
+            <div class="experience_subheader">
+                L3Harris WESCAM | May 2023 - August 2024
+            </div>
+            <div class="experience_details">
+                <ul>
+                    <li>Lead project to automate software release pipeline using <strong>Jenkins, Jira, python</strong> and <strong>docker</strong> to <strong>decrease build times by 50%</strong></li>
+                    <li>Created comprehensive <strong>pytest</strong> unit tests for over <strong>1000+ lines of backend code</strong></li>
+                    <li>Regularly took on team management responsibilities to <strong>lead scrums</strong> or to interface with key internal stakeholders on other teams</li>
+                    <li>Used <strong>J-frog artifactory</strong> to create centralized repository for Linux application cross compilers</li>
+                    <li>Developed <strong>high-level C drivers</strong> to interface MX-series camera to customer platforms</li>
+                    <li>Provided critical <strong>production support</strong> for Jenkins build pipeline</li>
+                </ul>
+            </div>
+            <div class="experience_subheader">
+                Skills Developed
+            </div>
+
+            <table class="skills_table">
+                <thead>
+                    <tr>
+                        <th>Technical Skills</th>
+                        <th>Non-technical Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C programming</td>
+                        <td>Project management</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Project estimation</td>
+                    </tr>
+                    <tr>
+                        <td>Jira</td>
+                        <td>Interface Control Document <br> implementation and verification</td>
+                    </tr>
+                    <tr>
+                        <td>Jenkins</td>
+                        <td>Interdepartment communication</td>
+                    </tr>
+                    <tr>
+                        <td>Docker</td>
+                        <td>Flow-up document creation <br> for management</td>
+                    </tr>
+                    <tr>
+                        <td>Pytest</td>
+                        <td>Code architecture documentation</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>Agile development</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Scrum leader</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Technical support</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Requirements acquisition</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="experience_container research">
+        <div class="wallpaper_image research_img"></div>
+        <div class="experience_desc research_experience">
+            <div class="job_title">
+                Nanostructure Research Assistant
+            </div>
+            <div class="experience_subheader">
+                McMaster Micronano Systems Laboratory <br> May 2021 - May 2022
+            </div>
+            <div class="experience_details">
+                <ul>
+                    <li><strong>Discovered novel copper oxide nanostructure</strong> to non-enzymatically detect glutamate in whole blood and urine</li>
+                    <a href="https://www.mdpi.com/2079-6374/13/2/237" target="_blank">
+                        <li>Published research in biosensors journal <strong>(click to view)</strong></li>
+                    </a>
+                </ul>
+            </div>
+            <div class="experience_subheader">
+                Skills Developed
+            </div>
+            <table class="skills_table research_table">
+                <thead>
+                    <tr>
+                        <th>Technical Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cyclic voltammetry</td>
+                    </tr>
+                    <tr>
+                        <td>Electrochemical detection</td>
+                    </tr>
+                    <tr>
+                        <td>Titration</td>
+                    </tr>
+                    <tr>
+                        <td>3D printing</td>
+                    </tr>
+                    <tr>
+                        <td>Technical writing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="experience_container macFormulaE">
+        <div class="wallpaper_image macFormulaE_img"></div>
+        <div class="experience_desc macFormulaE">
+            <div class="job_title">
+                C Library Developer
+            </div>
+            <div class="experience_subheader">
+                McMaster Formula Electric SAE <br> October 2020 - August 2021
+            </div>
+            <div class="experience_details">
+                <ul>
+                    <li>Developed <strong>timer, PWM and SPI libraries</strong> in C using <strong>STM CUBE IDE</strong> for the STM32 H series processor</li>
+                </ul>
+            </div>
+            <div class="experience_subheader">
+                Skills Developed
+            </div>
+
+            <table class="skills_table macFormulaE_table">
+                <thead>
+                    <tr>
+                        <th>Technical Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C library development</td>
+                    </tr>
+                    <tr>
+                        <td>Exposure to STM32 architecture</td>
+                    </tr>
+                    <tr>
+                        <td>Strong understanding of timers, PWM and SPI</td>
+                    </tr>
+                    <tr>
+                        <td>Embedded systems development</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="experience_container programCoord">
+        <div class="wallpaper_image programCoord_img"></div>
+        <div class="experience_desc programCoord_experience">
+            <div class="job_title">
+                Program Coordinator
+            </div>
+            <div class="experience_subheader">
+                Halton Environmental Network | June 2020 - August 2020
+            </div>
+            <div class="experience_details">
+                <ul>
+                    <li><strong>Developed automated system</strong> using google sheets, app scripts and google forms amid COVID-19 pandemic to allow individual community members to organize their own ‘micro’ clean-ups <strong>engaging 60 people in three months</strong></li>
+                </ul>
+            </div>
+            <div class="experience_subheader">
+                Skills Developed
+            </div>
+
+            <table class="skills_table">
+                <thead>
+                    <tr>
+                        <th>Technical Skills</th>
+                        <th>Non-technical Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google suite <br> docs, powerpoint, sheets, forms</td>
+                        <td>Social media promotion</td>
+                    </tr>
+                    <tr>
+                        <td>Google app scripts</td>
+                        <td>Event organization</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Poster and promotional video creation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

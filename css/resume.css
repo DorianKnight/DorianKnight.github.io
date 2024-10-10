@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --grey: #cfcfcf;
+    --dark-color: #111;
+    --nice-green: #009879;
+    --container-size: 1000px;
+    --header-font-size: 40px;
+    --header-font-weight: 600;
+    --subheader-font-size: 20px;
+    --subheader-font-weight: 500;
+    --experience-window-height-L3: 1100px;
+    --experience-window-height-research: 600px;
+    --experience-window-height-macFormulaE: 600px;
+    --experience-window-height-HEN: 550px;
+    --experience-window-width: 650px;
+    --wallpaper-image-width: 350px;
+    --experience_subheader-weight: 300;
+    --experience_subheader-size: 24px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--primary-color)
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 30px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul li:last-child a:hover {
+    color: var(--dark-color);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    font-weight: var(--header-font-weight);
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Utility Casses */
+.resume_page_header {
+    position: relative;
+    max-width: var(--container-size);
+    margin: 0 auto;
+    padding: 0 15px;
+    background-image: url(/images/laptop_on_blue_desk.jpeg);
+    background-size: var(--container-size);
+    height: 300px;
+}
+
+.page_title {
+    position: absolute;
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
+    top: 45%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+}
+
+.experience_container {
+    position: relative;
+    max-width: var(--container-size);
+    margin: 0 auto;
+    padding: 20px 0px;
+    display: flex;
+
+}
+
+.experience_container:before,
+.experience_container:after {
+    content: "";
+    display: table;
+}
+
+.experience_container:after {
+    clear: both;
+}
+
+.resume-divider {
+    text-align: center;
+    font-size: var(--subheader-font-size);
+}
+
+.experience_desc {
+    position:absolute;
+    width: var(--experience-window-width);
+    height: var(--experience-window-height-L3);
+    left: var(--wallpaper-image-width);
+    text-align: center;
+}
+
+.L3_experience {
+    height: var(--experience-window-height-L3);
+}
+
+.research_experience {
+    height: var(--experience-window-height-research);
+}
+
+.job_title {
+    font-weight: var(--subheader-font-weight);
+    font-size: var(--header-font-size);
+}
+
+.experience_subheader {
+    padding: 15px;
+    font-weight: var(--experience_subheader-weight);
+    font-size: var(--experience_subheader-size);
+}
+
+.experience_details {
+    position: relative;
+    left: 7%;
+    text-align: left;
+}
+
+.experience_details ul {
+    list-style-type: disc;
+}
+
+/* Experience specific images */
+.wallpaper_image {
+    position: relative;
+    width: var(--wallpaper-image-width);
+    background-size: cover;
+}
+
+.L3_img {
+    height: var(--experience-window-height-L3);
+    background-image: url(/images/Embedded-systems-large3.jpg);
+}
+
+.research_img {
+    height: var(--experience-window-height-research);
+    background-image: url(/images/biomedical_wetlab2.jpg);
+}
+
+.macFormulaE_img {
+    height: var(--experience-window-height-macFormulaE);
+    background-image: url(/images/formula_electric2.jpg);
+}
+
+.programCoord_img {
+    height: var(--experience-window-height-HEN);
+    background-image: url(/images/data_analytics2.jpg);
+}
+
+/* Table formatting */
+.skills_table {
+    position: relative;
+    left: 15%;
+    margin: 5px;
+    border-collapse: collapse;
+    width: 500px;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.30);
+}
+
+.research_table {
+    left: 25%;
+    width: 300px;
+}
+
+.macFormulaE_table {
+    left:25%;
+    width: 300px;
+}
+
+.skills_table thead tr {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+}
+
+.skills_table th,
+.skills_table td {
+    padding: 12px 15px;
+}
+
+.skills_table tbody tr {
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+    transition: 0.2s;
+}
+
+.skills_table tbody tr:nth-of-type(even) {
+    background-color: #e4e4e4;
+}
+
+.skills_table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.skills_table tbody tr:hover{
+    font-weight: bold;
+    color: var(--primary-color)
+}
