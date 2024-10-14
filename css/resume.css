@@ -19,6 +19,8 @@
     --experience-window-height-research: 600px;
     --experience-window-height-macFormulaE: 600px;
     --experience-window-height-HEN: 550px;
+    --experience-window-height-edu: 700px;
+    --experience-window-height-ecs: 700px;
     --experience-window-width: 650px;
     --wallpaper-image-width: 350px;
     --experience_subheader-weight: 300;
@@ -152,19 +154,18 @@ img {
 
 }
 
-.experience_container:before,
-.experience_container:after {
-    content: "";
-    display: table;
-}
-
-.experience_container:after {
-    clear: both;
-}
-
 .resume-divider {
-    text-align: center;
+    position: relative;
+    text-align: left;
+    margin: 10px, 10px;
+    position: relative;
+    transform: translate(55%,0%);
     font-size: var(--subheader-font-size);
+}
+
+.ecs {
+    transform: translate(47%,0%);
+   
 }
 
 .experience_desc {
@@ -229,6 +230,16 @@ img {
 .programCoord_img {
     height: var(--experience-window-height-HEN);
     background-image: url(/images/data_analytics2.jpg);
+}
+
+.education_img {
+    height: var(--experience-window-height-edu);
+    background-image: url(/images/mcmaster_logo3.png);
+}
+
+.extracurricular_img {
+    height: var(--experience-window-height-ecs);
+    background-image: url(/images/boardroom4.jpg);
 }
 
 /* Table formatting */
