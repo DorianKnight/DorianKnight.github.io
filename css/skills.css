@@ -132,7 +132,7 @@ img {
     font-weight: var(--header-font-weight);
     font-size: var(--header-font-size);
     top: 45%;
-    left: 30%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -142,7 +142,7 @@ img {
     margin: 50px auto;
     text-align: center;
     font-size: var(--subheader-font-size);
-    
+
 }
 
 /* Skill tree */
@@ -158,7 +158,7 @@ img {
                          ".               .               .         .      vectorcalc   .           ."
                          ".               .               .         .      diffeqns     .           ."
                          ".               .               .         .      linalg       .           ."
-                         "research        stats           .         .      embsys       .           ."
+                         "research        stats           biomed    .      embsys       .           ."
                          ".               critap          inquiry   .      datastr      datasql     ."
                          ".               geneticeng      cellbio   root   clang        embdesign   pcbdesign"
                          ".               anatphys        .         .      signals      .           ."
@@ -218,9 +218,8 @@ img {
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    left: 55%;
-    top: 5%;
-    height: 800px;
+    left: 50%;
+    height: fit-content;
     width: 700px;
     outline-style: inset;
     outline-color: var(--primary-color);
@@ -232,9 +231,8 @@ img {
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    left: 5%;
-    top: 5%;
-    height: 800px;
+    left: 10%;
+    height: fit-content;
     width: 700px;
     outline-style: inset;
     outline-color: var(--primary-color);
@@ -242,9 +240,16 @@ img {
     background-color: var(--light-color);
 }
 
-
 .info_box_header {
     text-align: center;
+}
+
+.info_box_text {
+    padding: 30px;
+}
+
+.info_box_text>ul {
+    list-style: disc;
 }
 
 .inquiry:hover ~ .inquiry_info {
@@ -270,7 +275,7 @@ img {
 .signal_analysis:hover ~ .signals_info {
     opacity: 1;
     visibility: visible;
-} 
+}
 
 .orgchem:hover ~ .orgchem_info {
     opacity: 1;
@@ -485,6 +490,10 @@ img {
     font-size: 32px;
     text-align: center;
 
+}
+
+.skill_tree_grid_container>.biomedical {
+    grid-area: biomed;
 }
 
 .skill_tree_grid_container>.chem {
