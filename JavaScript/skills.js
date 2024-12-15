@@ -51,10 +51,11 @@ function updateInfoBoxPos() {
                 // Align the top of the information box a fixed distance away from the top
                 skillObjectInfo.style.top = `${info_box_padding}px`
             }
-
-            else if ((skillObjectPos.top + skillObjectInfoPos.height/2) >= window.innerHeight-skillObjectInfoPos.height/2) {
+            
+            // If the bottom of the information box would intersect with the padding zone at the bottom of the view port
+            else if ((skillObjectPos.top + skillObjectInfoPos.height/2 + skillObjectPos.height/2) >= window.innerHeight-info_box_padding) {
                 // Align the top of the information box a fixed distance away from the bottom
-                skillObjectInfo.style.top = `${window.innerHeight - skillObjectInfoPos.height - info_box_padding}px`
+                skillObjectInfo.style.top = `${window.innerHeight - skillObjectInfoPos.height - info_box_padding/2}px`
             }
 
             else {
