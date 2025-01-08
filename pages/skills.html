@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     </head>
 
-    <body>
+    <body id="websiteBody">
         <!-- Navbar -->
         <nav class="navbar">
             <div class="container">
@@ -40,7 +40,6 @@
         </nav>
 
     <!-- Header -->
-
     <div class="skills_header_container">
         <div class="page_title">
             My Skillset
@@ -50,14 +49,11 @@
     <div class="page_desc">
         <p>Explore what I know to see if I would be a good fit for your team. <br><strong>Hover over each element to learn more</strong></p>
     </div>
-    <!-- Skill tree -->
-    <div class="skill_tree_grid_container">
-        <!-- <div class="grid_item"></div>
-        <div class="grid_item">Statistical methods in <br> biomedical engineering</div>
-        <div class="grid_item">Biomedical Engineering</div> -->
 
+    <!-- Skill tree -->
+    <div class="skill_tree_grid_container" id="skill_tree_grid_container">
         <!-- Root node -->
-        <div class="grid_item root">Dorian</div>
+        <div class="grid_item root" id="root">Dorian</div>
 
         <!-- Titles -->
         <div class="section_title biomedical">Biomedical Engineering</div>
@@ -94,6 +90,9 @@
         <div class="grid_item electromag"      id="electromag"     >Electricity and magnetism</div>
         <div class="grid_item compdyn"         id="compdyn"        >Computational dynamics</div>
         <div class="grid_item statics"         id="statics"        >Static analysis</div>
+
+        <!-- Canvas -->
+        <canvas id="connecting_arrows"></canvas>
 
         <!-- Information boxes -->
         <div class="info_box_right inquiry_info" id="inquiry_info">

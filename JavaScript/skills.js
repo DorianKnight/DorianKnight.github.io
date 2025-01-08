@@ -51,7 +51,7 @@ function updateInfoBoxPos() {
                 // Align the top of the information box a fixed distance away from the top
                 skillObjectInfo.style.top = `${info_box_padding}px`
             }
-            
+
             // If the bottom of the information box would intersect with the padding zone at the bottom of the view port
             else if ((skillObjectPos.top + skillObjectInfoPos.height/2 + skillObjectPos.height/2) >= window.innerHeight-info_box_padding) {
                 // Align the top of the information box a fixed distance away from the bottom
@@ -70,4 +70,213 @@ function updateInfoBoxPos() {
     setTimeout(updateInfoBoxPos, 10)
 }
 
+function drawBezierCurves() {
+    // Draw the curved connecting arrows
+    const required_connections = [
+        // Root to left and right
+        ["root", "inquiry",         "left", "different"],
+        ["root", "cellbio",         "left", "sameRht"],
+        ["root", "orgchem",         "left", "different"],
+
+        ["root", "vectorcalc",      "right", "different"],
+        ["root", "diffeqns",        "right", "different"],
+        ["root", "linalg",          "right", "different"],
+        ["root", "clang",           "right", "different"],
+        ["root", "embdesign",       "right", "sameLft"],
+        ["root", "signal_analysis", "right", "different"],
+        ["root", "data_structures", "right", "different"],
+        ["root", "python",          "right", "different"],
+        ["root", "webdev",          "right", "different"],
+        ["root", "datasql",         "right", "different"],
+        ["root", "devops",          "right", "different"],
+        ["root", "electromag",      "right", "different"],
+        ["root", "compdyn",         "right", "different"],
+        ["root", "statics",         "right", "different"],
+
+        // Biomedical Eng
+        ["inquiry", "critap",     "left", "sameRht"],
+        ["inquiry", "stats",      "left", "different"],
+        ["cellbio", "geneticeng", "left", "sameRht"],
+        ["cellbio", "anatphys",   "left", "different"],
+        ["stats", "research",     "left", "sameRht"],
+
+        // Chem
+        ["orgchem", "electrochem", "left", "sameRht"],
+
+        // Math
+
+        // Embedded systems
+        ["embdesign", "pcbdesign", "right", "sameRht"],
+
+        // Software
+        ["devops", "docker",  "right", "sameLft"],
+        ["devops", "jenkins", "right", "different"],
+    ]
+
+    // Initialize canvas
+    // console.log("Drawing curves")
+    const canvas = document.getElementById("connecting_arrows")
+    const ctx = canvas.getContext("2d")
+
+    skillTree = document.getElementById("skill_tree_grid_container")
+    skillTreePos = skillTree.getBoundingClientRect()
+
+    websiteBody - document.getElementById("websiteBody")
+    websiteBodyPos = websiteBody.getBoundingClientRect()
+
+    canvas.width = websiteBodyPos.width
+    canvas.height = websiteBodyPos.height
+
+    // Draw all arrows to connect each pair of elements in the list
+
+    for (let i=0; i<required_connections.length; i++) {
+        // Get objects
+        let connection = required_connections[i]
+
+        start_skillObject = document.getElementById(connection[0])
+        start_skillObjectPos = start_skillObject.getBoundingClientRect()
+
+        end_skillObject = document.getElementById(connection[1])
+        end_skillObjectPos = end_skillObject.getBoundingClientRect()
+
+        let direction = connection[2]
+        let heightDiff = connection[3]
+
+        if (direction == "left" && heightDiff == "different") {
+            // Make the arrow come from the left of the start object and end at the right of the end object
+            // The elements are at different heights
+
+            // Start point
+            x0 = start_skillObjectPos.left + scrollX
+            y0 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+
+            // Control point 1
+            x1 = end_skillObjectPos.right + scrollX
+            y1 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+
+            // Control point 2
+            x2 = start_skillObjectPos.left + scrollX
+            y2 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+
+            // End point
+            x3 = end_skillObjectPos.right + scrollX
+            y3 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+        }
+
+        else if (direction == "left" && heightDiff == "sameRht") {
+            // Make the arrow come from the left of the start object and end at the right of the end object
+            // The elements are at the same heights
+
+             // Start point
+             x0 = start_skillObjectPos.left + scrollX
+             y0 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+ 
+             // Control point 1
+             x1 = x0
+             y1 = y0
+ 
+             // Control point 2
+             x2 = x0
+             y2 = y0
+ 
+             // End point
+             x3 = end_skillObjectPos.right + scrollX
+             y3 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+        }
+
+        else if (direction == "left" && heightDiff == "sameLft") {
+            // Make the arrow come from the left of the start object and end at the right of the end object
+            // The elements are at the same heights
+
+             // Start point
+             x0 = start_skillObjectPos.left + scrollX
+             y0 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+ 
+             // Control point 1
+             x1 = x0
+             y1 = y0
+ 
+             // Control point 2
+             x2 = x0
+             y2 = y0
+ 
+             // End point
+             x3 = end_skillObjectPos.right + scrollX
+             y3 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+        }
+
+        else if (direction == "right" && heightDiff == "different") {
+            // Make the arrow come from the right of the start object and end at the left of the end object
+            // The elements are at the different heights
+
+            // Start point
+            x0 = start_skillObjectPos.right + scrollX
+            y0 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+
+            // Control point 1
+            x1 = end_skillObjectPos.left + scrollX
+            y1 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+
+            // Control point 2
+            x2 = start_skillObjectPos.right + scrollX
+            y2 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+
+            // End point
+            x3 = end_skillObjectPos.left + scrollX
+            y3 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+        }
+
+        else if (direction == "right" && heightDiff == "sameRht") {
+            // Make the arrow come from the right of the start object and end at the left of the end object
+            // The elements are at the same heights
+
+            // Start point
+            x0 = start_skillObjectPos.right + scrollX
+            y0 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+
+            // Control point 1
+            x1 = x0
+            y1 = y0
+
+            // Control point 2
+            x2 = x0
+            y2 = y0
+
+            // End point
+            x3 = end_skillObjectPos.left + scrollX
+            y3 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
+        }
+
+        else if (direction == "right" && heightDiff == "sameLft") {
+            // Make the arrow come from the right of the start object and end at the left of the end object
+            // The elements are at the same heights
+
+            // Start point
+            x0 = start_skillObjectPos.right + scrollX
+            y0 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+
+            // Control point 1
+            x1 = x0
+            y1 = y0
+
+            // Control point 2
+            x2 = x0
+            y2 = y0
+
+            // End point
+            x3 = end_skillObjectPos.left + scrollX
+            y3 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
+        }
+
+        ctx.beginPath()
+        ctx.moveTo(x0, y0)
+        ctx.bezierCurveTo(x1,y1,x2,y2,x3,y3)
+        ctx.stroke()
+    }
+
+    // Update every 10 milliseconds
+    setTimeout(drawBezierCurves, 10)
+}
+
 updateInfoBoxPos()
+drawBezierCurves()
