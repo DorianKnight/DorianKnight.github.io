@@ -161,11 +161,12 @@ img {
                          ".               .               .         .      diffeqns     .           ."
                          ".               .               .         .      linalg       .           ."
                          "research        stats           biomed    .      embsys       .           ."
-                         ".               critap          inquiry   .      datastr      .           ."
-                         ".               geneticeng      cellbio   root   clang        embdesign   pcbdesign"
+                         ".               critap          inquiry   .      clang        .           ."
+                         ".               geneticeng      cellbio   root   embdesign    pcbdesign   ."
                          ".               anatphys        .         .      signals      .           ."
                          ".               .               chem      .      sfwr         .           ."
-                         "electrochem     .               orgchem   .      python       .           ."
+                         "electrochem     .               orgchem   .      datastr      .           ."
+                         ".               .               .         .      python       .           ."
                          ".               .               .         .      webdev       .           ."
                          ".               .               .         .      datasql      .           ."
                          ".               .               .         .      devops       docker      ."
@@ -174,8 +175,6 @@ img {
                          ".               .               .         .      electromag   .           ."
                          ".               .               .         .      compdyn      .           ."
                          ".               .               .         .      statics      .           .";
-    /* max-width: fit-content; */
-    /* max-height: fit-content; */
 }
 
 /* Grid items */
