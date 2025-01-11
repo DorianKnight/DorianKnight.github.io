@@ -373,6 +373,8 @@ img {
 .statics:hover ~ .statics_info {
     opacity: 1;
     visibility: visible;
+.skill_tree_grid_container>.inquiry {
+    grid-area: inquiry;
 }
 
 .skill_tree_grid_container>.data_structures {
