@@ -279,5 +279,72 @@ function drawBezierCurves() {
     setTimeout(drawBezierCurves, 10)
 }
 
+const objectInfoBox = {
+    "inquiry": "inquiry_info",
+    "data_structures": "datastr_info",
+    "cellbio": "cellbio_info",
+    "clang": "clang_info",
+    "signal_analysis": "signals_info",
+    "orgchem": "orgchem_info",
+    "stats": "stats_info",
+    "critap": "critap_info",
+    "geneticeng": "geneticeng_info",
+    "anatphys": "anatphys_info",
+    "research": "research_info",
+    "electrochem": "electrochem_info",
+    "vectorcalc": "vectorcalc_info",
+    "diffeqns": "diffeqns_info",
+    "linalg": "linalg_info",
+    "datasql": "datasql_info",
+    "embdesign": "embdesign_info",
+    "pcbdesign": "pcbdesign_info",
+    "python": "python_info",
+    "webdev": "webdev_info",
+    "devops": "devops_info",
+    "docker": "docker_info",
+    "jenkins": "jenkins_info",
+    "electromag": "electromag_info",
+    "compdyn": "compdyn_info",
+    "statics": "statics_info",
+}
+
+let grid_item_width = "200"
+
+function skillObjEnableHoverEffects(objectId) {
+    // Enable hover effects and make info box visible
+    console.log("Enabling Hover effect for " +objectId )
+    skillObjectInfoId = objectInfoBox[objectId]
+
+    // Get objects
+    skillObject = document.getElementById(objectId)
+    skillObjectInfo = document.getElementById(skillObjectInfoId)
+
+    // Make info box visible
+    skillObjectInfo.style.visibility = "visible"
+    skillObjectInfo.style.opacity = 1
+
+    // Enable drop shadow effect
+    skillObject.style.boxShadow = "0px 0px 30px"
+    skillObject.style.width = `${grid_item_width * 1.20}px`
+}
+
+
+function skillObjectDisableHoverEffects(objectId) {
+    // Disable hover effects and make info box hidden
+    skillObjectInfoId = objectInfoBox[objectId]
+
+    // Get objects
+    skillObject = document.getElementById(objectId)
+    skillObjectInfo = document.getElementById(skillObjectInfoId)
+
+    // Make info box visible
+    skillObjectInfo.style.visibility = "hidden"
+    skillObjectInfo.style.opacity = 0
+
+    // Enable drop shadow effect
+    skillObject.style.boxShadow = "0px 0px 0px"
+    skillObject.style.width = `${grid_item_width}px`
+}
+
 updateInfoBoxPos()
 drawBezierCurves()
