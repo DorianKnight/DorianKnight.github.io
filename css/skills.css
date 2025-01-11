@@ -179,15 +179,11 @@ img {
 
 /* Grid items */
 .grid_item {
-    /* background-color: #009879; */
     border: 1px solid rgba(0, 0, 0, 0.8);
-    /* border-radius: 50%; */
     border-radius: 30px 30px 30px 30px;
     padding: 20px;
     text-align: center;
     width: var(--grid_item_width);
-    /* height: var(--grid_item_height); */
-    /* max-width: fit-content; */
     height: fit-content;
     margin: 10px auto;
     font-size: 15px;
@@ -209,12 +205,6 @@ img {
     width: fit-content;
     text-align: center;
     height: 65px;
-}
-
-.skill_tree_grid_container>.inquiry {
-    grid-area: inquiry;
-    position: relative;
-    transition: 0.6s;
 }
 
 .info_box_right {
@@ -385,7 +375,6 @@ img {
     visibility: visible;
 }
 
-
 .skill_tree_grid_container>.data_structures {
     grid-area: datastr;
 }
@@ -486,15 +475,6 @@ img {
     grid-area: statics;
 }
 
-
-/* Grid titles */
-.skill_tree_grid_container>.section_title {
-    font-weight: 600;
-    font-size: 32px;
-    text-align: center;
-
-}
-
 .skill_tree_grid_container>.biomedical {
     grid-area: biomed;
 }
@@ -519,6 +499,14 @@ img {
     grid-area: sfwr;
 }
 
+/* Grid titles */
+.skill_tree_grid_container>.section_title {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Canvas */
 canvas {
     position: absolute;
     top: 0;

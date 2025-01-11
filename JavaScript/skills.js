@@ -2,37 +2,38 @@
 // Date: December 14th 2024
 // Description: Provides the interactive javascript on the skill tree page
 
+// All skills in skill tree: [skill object, skill object information box]
+const skill_objects = [
+    ['inquiry'        , 'inquiry_info', ],
+    ['data_structures', 'datastr_info'],
+    ['cellbio'        , 'cellbio_info'],
+    ['clang'          , 'clang_info'],
+    ['signal_analysis', 'signals_info'],
+    ['orgchem'        , 'orgchem_info'],
+    ['stats'          , 'stats_info'],
+    ['critap'         , 'critap_info'],
+    ['geneticeng'     , 'geneticeng_info'],
+    ['anatphys'       , 'anatphys_info'],
+    ['research'       , 'research_info'],
+    ['electrochem'    , 'electrochem_info'],
+    ['vectorcalc'     , 'vectorcalc_info'],
+    ['diffeqns'       , 'diffeqns_info'],
+    ['linalg'         , 'linalg_info'],
+    ['datasql'        , 'datasql_info'],
+    ['embdesign'      , 'embdesign_info'],
+    ['pcbdesign'      , 'pcbdesign_info'],
+    ['python'         , 'python_info'],
+    ['webdev'         , 'webdev_info'],
+    ['devops'         , 'devops_info'],
+    ['docker'         , 'docker_info'],
+    ['jenkins'        , 'jenkins_info'],
+    ['electromag'     , 'electromag_info'],
+    ['compdyn'        , 'compdyn_info'],
+    ['statics'        , 'statics_info'],
+]
+
 function updateInfoBoxPos() {
     const info_box_padding = 50
-    // All skills in skill tree: [skill object, skill object information box]
-    const skill_objects = [
-        ['inquiry'        , 'inquiry_info'],
-        ['data_structures', 'datastr_info'],
-        ['cellbio'        , 'cellbio_info'],
-        ['clang'          , 'clang_info'],
-        ['signal_analysis', 'signals_info'],
-        ['orgchem'        , 'orgchem_info'],
-        ['stats'          , 'stats_info'],
-        ['critap'         , 'critap_info'],
-        ['geneticeng'     , 'geneticeng_info'],
-        ['anatphys'       , 'anatphys_info'],
-        ['research'       , 'research_info'],
-        ['electrochem'    , 'electrochem_info'],
-        ['vectorcalc'     , 'vectorcalc_info'],
-        ['diffeqns'       , 'diffeqns_info'],
-        ['linalg'         , 'linalg_info'],
-        ['datasql'        , 'datasql_info'],
-        ['embdesign'      , 'embdesign_info'],
-        ['pcbdesign'      , 'pcbdesign_info'],
-        ['python'         , 'python_info'],
-        ['webdev'         , 'webdev_info'],
-        ['devops'         , 'devops_info'],
-        ['docker'         , 'docker_info'],
-        ['jenkins'        , 'jenkins_info'],
-        ['electromag'     , 'electromag_info'],
-        ['compdyn'        , 'compdyn_info'],
-        ['statics'        , 'statics_info'],
-    ]
 
     // Iterate over every skill object in skill tree
     for (let i=0; i<skill_objects.length; i++) {
@@ -70,51 +71,51 @@ function updateInfoBoxPos() {
     setTimeout(updateInfoBoxPos, 10)
 }
 
+const required_connections = [
+    // Root to left and right
+    ["root", "inquiry",         "left", "different"],
+    ["root", "cellbio",         "left", "sameRht"],
+    ["root", "orgchem",         "left", "different"],
+
+    ["root", "vectorcalc",      "right", "different"],
+    ["root", "diffeqns",        "right", "different"],
+    ["root", "linalg",          "right", "different"],
+    ["root", "clang",           "right", "different"],
+    ["root", "embdesign",       "right", "sameLft"],
+    ["root", "signal_analysis", "right", "different"],
+    ["root", "data_structures", "right", "different"],
+    ["root", "python",          "right", "different"],
+    ["root", "webdev",          "right", "different"],
+    ["root", "datasql",         "right", "different"],
+    ["root", "devops",          "right", "different"],
+    ["root", "electromag",      "right", "different"],
+    ["root", "compdyn",         "right", "different"],
+    ["root", "statics",         "right", "different"],
+
+    // Biomedical Eng
+    ["inquiry", "critap",     "left", "sameRht"],
+    ["inquiry", "stats",      "left", "different"],
+    ["cellbio", "geneticeng", "left", "sameRht"],
+    ["cellbio", "anatphys",   "left", "different"],
+    ["stats", "research",     "left", "sameRht"],
+
+    // Chem
+    ["orgchem", "electrochem", "left", "sameRht"],
+
+    // Math
+
+    // Embedded systems
+    ["embdesign", "pcbdesign", "right", "sameRht"],
+
+    // Software
+    ["devops", "docker",  "right", "sameLft"],
+    ["devops", "jenkins", "right", "different"],
+]
+
 function drawBezierCurves() {
     // Draw the curved connecting arrows
-    const required_connections = [
-        // Root to left and right
-        ["root", "inquiry",         "left", "different"],
-        ["root", "cellbio",         "left", "sameRht"],
-        ["root", "orgchem",         "left", "different"],
-
-        ["root", "vectorcalc",      "right", "different"],
-        ["root", "diffeqns",        "right", "different"],
-        ["root", "linalg",          "right", "different"],
-        ["root", "clang",           "right", "different"],
-        ["root", "embdesign",       "right", "sameLft"],
-        ["root", "signal_analysis", "right", "different"],
-        ["root", "data_structures", "right", "different"],
-        ["root", "python",          "right", "different"],
-        ["root", "webdev",          "right", "different"],
-        ["root", "datasql",         "right", "different"],
-        ["root", "devops",          "right", "different"],
-        ["root", "electromag",      "right", "different"],
-        ["root", "compdyn",         "right", "different"],
-        ["root", "statics",         "right", "different"],
-
-        // Biomedical Eng
-        ["inquiry", "critap",     "left", "sameRht"],
-        ["inquiry", "stats",      "left", "different"],
-        ["cellbio", "geneticeng", "left", "sameRht"],
-        ["cellbio", "anatphys",   "left", "different"],
-        ["stats", "research",     "left", "sameRht"],
-
-        // Chem
-        ["orgchem", "electrochem", "left", "sameRht"],
-
-        // Math
-
-        // Embedded systems
-        ["embdesign", "pcbdesign", "right", "sameRht"],
-
-        // Software
-        ["devops", "docker",  "right", "sameLft"],
-        ["devops", "jenkins", "right", "different"],
-    ]
 
     // Initialize canvas
-    // console.log("Drawing curves")
     const canvas = document.getElementById("connecting_arrows")
     const ctx = canvas.getContext("2d")
 
@@ -170,15 +171,15 @@ function drawBezierCurves() {
              // Start point
              x0 = start_skillObjectPos.left + scrollX
              y0 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
- 
+
              // Control point 1
              x1 = x0
              y1 = y0
- 
+
              // Control point 2
              x2 = x0
              y2 = y0
- 
+
              // End point
              x3 = end_skillObjectPos.right + scrollX
              y3 = start_skillObjectPos.top + scrollY + start_skillObjectPos.height/2
@@ -191,15 +192,15 @@ function drawBezierCurves() {
              // Start point
              x0 = start_skillObjectPos.left + scrollX
              y0 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
- 
+
              // Control point 1
              x1 = x0
              y1 = y0
- 
+
              // Control point 2
              x2 = x0
              y2 = y0
- 
+
              // End point
              x3 = end_skillObjectPos.right + scrollX
              y3 = end_skillObjectPos.top + scrollY + end_skillObjectPos.height/2
