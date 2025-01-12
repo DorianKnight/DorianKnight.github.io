@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --grey: #cfcfcf;
+    --dark-color: #111;
+    --nice-green: #009879;
+    --container-size: 1650px;
+    --header-font-size: 70px;
+    --header-font-weight: 600;
+    --subheader-font-size: 20px;
+    --subheader-font-weight: 500;
+    --grid_item_width: 200px;
+    --grid_item_height: 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--primary-color)
+}
+
+ul {
+    padding-left: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li a {
+    padding: 10px 30px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul li:last-child a:hover {
+    color: var(--dark-color);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    font-weight: var(--header-font-weight);
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Page header */
+.skills_header_container {
+    position: relative;
+    max-width: var(--container-size);
+    margin: 0 auto;
+    background-image: url(/images/toolset3.jpeg);
+    background-size: var(--container-size);
+    height: 300px;
+}
+
+.skills_header_container>.page_title {
+    position: absolute;
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page_desc {
+    position: relative;
+    width: var(--container-size);
+    margin: 50px auto;
+    text-align: center;
+    font-size: var(--subheader-font-size);
+
+}
+
+/* Skill tree */
+
+.skill_tree_grid_container {
+    display: grid;
+    padding: 10px;
+    max-width: var(--container-size);
+    margin-inline: auto;
+    grid-template-columns: repeat(7, 1fr);
+    /* ----------------------- Grid layout ----------------------- */
+    grid-template-areas: ".               .               .         .      math         .           ."
+                         ".               .               .         .      vectorcalc   .           ."
+                         ".               .               .         .      diffeqns     .           ."
+                         ".               .               .         .      linalg       .           ."
+                         "research        stats           biomed    .      embsys       .           ."
+                         ".               critap          inquiry   .      clang        .           ."
+                         ".               geneticeng      cellbio   root   embdesign    pcbdesign   ."
+                         ".               anatphys        .         .      signals      .           ."
+                         ".               .               chem      .      sfwr         .           ."
+                         "electrochem     .               orgchem   .      datastr      .           ."
+                         ".               .               .         .      python       .           ."
+                         ".               .               .         .      webdev       .           ."
+                         ".               .               .         .      datasql      .           ."
+                         ".               .               .         .      devops       docker      ."
+                         ".               .               .         .      .            jenkins     ."
+                         ".               .               .         .      phys         .           ."
+                         ".               .               .         .      electromag   .           ."
+                         ".               .               .         .      compdyn      .           ."
+                         ".               .               .         .      statics      .           .";
+}
+
+/* Grid items */
+.grid_item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 30px 30px 30px 30px;
+    padding: 20px;
+    text-align: center;
+    width: var(--grid_item_width);
+    height: fit-content;
+    margin: 10px auto;
+    font-size: 15px;
+    transition: 0.6s ease-in-out;
+}
+
+.skill_tree_grid_container>.root {
+    grid-area: root;
+    width: fit-content;
+    text-align: center;
+    height: 65px;
+}
+
+.info_box_right {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    height: fit-content;
+    width: 700px;
+    outline-style: inset;
+    outline-color: var(--primary-color);
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    background-color: var(--light-color);
+}
+
+.info_box_left {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 10%;
+    height: fit-content;
+    width: 700px;
+    outline-style: inset;
+    outline-color: var(--primary-color);
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    background-color: var(--light-color);
+}
+
+.info_box_header {
+    text-align: center;
+}
+
+.info_box_text {
+    padding: 30px;
+}
+
+.info_box_text>ul {
+    list-style: disc;
+}
+
+.skill_tree_grid_container>.inquiry {
+    grid-area: inquiry;
+}
+
+.skill_tree_grid_container>.data_structures {
+    grid-area: datastr;
+}
+
+.skill_tree_grid_container>.cellbio {
+    grid-area: cellbio;
+}
+
+.skill_tree_grid_container>.clang {
+    grid-area: clang;
+}
+
+.skill_tree_grid_container>.signal_analysis {
+    grid-area: signals;
+}
+
+.skill_tree_grid_container>.orgchem {
+    grid-area: orgchem;
+}
+
+.skill_tree_grid_container>.stats {
+    grid-area: stats;
+}
+
+.skill_tree_grid_container>.critap {
+    grid-area: critap;
+}
+
+.skill_tree_grid_container>.geneticeng{
+    grid-area: geneticeng;
+}
+
+.skill_tree_grid_container>.anatphys {
+    grid-area: anatphys;
+}
+
+.skill_tree_grid_container>.research {
+    grid-area: research;
+}
+
+.skill_tree_grid_container>.electrochem {
+    grid-area: electrochem;
+}
+
+.skill_tree_grid_container>.vectorcalc {
+    grid-area: vectorcalc;
+}
+
+.skill_tree_grid_container>.diffeqns {
+    grid-area: diffeqns;
+}
+
+.skill_tree_grid_container>.linalg {
+    grid-area: linalg;
+}
+
+.skill_tree_grid_container>.datasql {
+    grid-area: datasql;
+}
+
+.skill_tree_grid_container>.embdesign {
+    grid-area: embdesign;
+}
+
+.skill_tree_grid_container>.pcbdesign {
+    grid-area: pcbdesign;
+}
+
+.skill_tree_grid_container>.python {
+    grid-area: python;
+}
+
+.skill_tree_grid_container>.webdev {
+    grid-area: webdev;
+}
+
+.skill_tree_grid_container>.devops {
+    grid-area: devops;
+}
+
+.skill_tree_grid_container>.docker {
+    grid-area: docker;
+}
+
+.skill_tree_grid_container>.jenkins {
+    grid-area: jenkins;
+}
+
+.skill_tree_grid_container>.electromag {
+    grid-area: electromag;
+}
+
+.skill_tree_grid_container>.compdyn {
+    grid-area: compdyn;
+}
+
+.skill_tree_grid_container>.statics {
+    grid-area: statics;
+}
+
+.skill_tree_grid_container>.biomedical {
+    grid-area: biomed;
+}
+
+.skill_tree_grid_container>.chem {
+    grid-area: chem;
+}
+
+.skill_tree_grid_container>.math {
+    grid-area: math;
+}
+
+.skill_tree_grid_container>.embsys {
+    grid-area: embsys;
+}
+
+.skill_tree_grid_container>.phys {
+    grid-area: phys;
+}
+
+.skill_tree_grid_container>.sfwr {
+    grid-area: sfwr;
+}
+
+/* Grid titles */
+.skill_tree_grid_container>.section_title {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

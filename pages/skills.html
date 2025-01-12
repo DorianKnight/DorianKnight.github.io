@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dorian Knight Skills</title>
+        <link rel="stylesheet" href="/css/skills.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <body id="websiteBody">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/index.html">
+                        <img src="/images/favicon.ico" alt="logo">
+                    </a>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="/pages/resume.html">Resume</a>
+                        </li>
+                        <li>
+                            <a href="#">Projects</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" href="/pages/skills.html">Skills</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Header -->
+    <div class="skills_header_container">
+        <div class="page_title">
+            My Skillset
+        </div>
+    </div>
+
+    <div class="page_desc">
+        <p>Explore what I know to see if I would be a good fit for your team. <br><strong>Hover over each element to learn more</strong></p>
+    </div>
+
+    <!-- Skill tree -->
+    <div class="skill_tree_grid_container" id="skill_tree_grid_container">
+        <!-- Root node -->
+        <div class="grid_item root" id="root">Dorian</div>
+
+        <!-- Titles -->
+        <div class="section_title biomedical">Biomedical Engineering</div>
+        <div class="section_title chem">Chemistry</div>
+        <div class="section_title math">Math</div>
+        <div class="section_title embsys">Embedded Systems</div>
+        <div class="section_title phys">Physics</div>
+        <div class="section_title sfwr">Software</div>
+
+        <!-- Classes and skills -->
+        <div class="grid_item inquiry"         id="inquiry"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Inquiry | Biochemistry</div>
+        <div class="grid_item data_structures" id="data_structures" onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Data structures <br> and algorithms</div>
+        <div class="grid_item cellbio"         id="cellbio"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Cellular biology</div>
+        <div class="grid_item clang"           id="clang"           onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">C-programming</div>
+        <div class="grid_item signal_analysis" id="signal_analysis" onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Signal analysis and <br> filter design</div>
+        <div class="grid_item orgchem"         id="orgchem"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)"> Organic chemistry</div>
+        <div class="grid_item stats"           id="stats"           onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Statistical methods in <bc> biomedical engineering</div>
+        <div class="grid_item critap"          id="critap"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Critical appraisal of <br> medical literature</div>
+        <div class="grid_item geneticeng"      id="geneticeng"      onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Genetic engineering</div>
+        <div class="grid_item anatphys"        id="anatphys"        onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Anatomy and <br> physiology</div>
+        <div class="grid_item research"        id="research"        onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Nanostructure metal <br> oxide research</div>
+        <div class="grid_item electrochem"     id="electrochem"     onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Electrochemistry</div>
+        <div class="grid_item vectorcalc"      id="vectorcalc"      onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Vector Calculus</div>
+        <div class="grid_item diffeqns"        id="diffeqns"        onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Differential equations</div>
+        <div class="grid_item linalg"          id="linalg"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Linear algebra</div>
+        <div class="grid_item datasql"         id="datasql"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Databases and SQL</div>
+        <div class="grid_item embdesign"       id="embdesign"       onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Embedded systems <br> design</div>
+        <div class="grid_item pcbdesign"       id="pcbdesign"       onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">PCB design</div>
+        <div class="grid_item python"          id="python"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Python</div>
+        <div class="grid_item webdev"          id="webdev"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Frontend web design</div>
+        <div class="grid_item devops"          id="devops"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Devops</div>
+        <div class="grid_item docker"          id="docker"          onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Docker</div>
+        <div class="grid_item jenkins"         id="jenkins"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Jenkins</div>
+        <div class="grid_item electromag"      id="electromag"      onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Electricity and magnetism</div>
+        <div class="grid_item compdyn"         id="compdyn"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Computational dynamics</div>
+        <div class="grid_item statics"         id="statics"         onclick="lockSkillObject(id)" onmouseenter="skillObjEnableHoverEffects(id)" onmouseleave="skillObjectDisableHoverEffects(id)">Static analysis</div>
+
+        <!-- Canvas -->
+        <canvas id="connecting_arrows"></canvas>
+
+        <!-- Information boxes -->
+        <div class="info_box_right inquiry_info" id="inquiry_info">
+            <div class="info_box_header">
+                <h1>Inquiry and Biochemistry</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Cellular and molecular biology foundational knowledge</li>
+                    <li><strong>Studied disease etiology and generated novel treatment ideas</strong></li>
+                    <li>Diseases researched:
+                        <ul>
+                            <li>COVID-19 and variants</li>
+                            <li>Type II diabetes</li>
+                            <li>Glaucoma</li>
+                            <li>Charcot-Marie-Tooth type II</li>
+                            <li>Retinopathy of prematurity</li>
+                        </ul>
+                    </li>
+                    <li>Visualize and present complex cellular signaling mechanisms through biorender</li>
+                    <li>Foundational knowledge on CRISPR</li>
+                    <li><strong>Familiarity using reputable peer-reviewed journals to support or disprove novel drug treatment plans</strong></li>
+                    <li><strong>Strong collaborative research skills to collect data and present work as a team</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left datastr_info" id="datastr_info">
+            <div class="info_box_header">
+                <h1>Data structures and algorithms</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>C++</strong></li>
+                    <li><strong>Object oriented design</strong></li>
+                    <li>Operation overloading</li>
+                    <li>Constructors</li>
+                    <li>Desstructors</li>
+                    <li>Memory management</li>
+                    <li><strong>Pointers</strong></li>
+                    <li>Static and dynamic binding</li>
+                    <li>Encapsulation</li>
+                    <li><strong>Inheritance</strong></li>
+                    <li>Recursion</li>
+                    <li>Polymorphism</li>
+                    <li>Exception handling</li>
+                    <li>Abstraction</li>
+                    <li>Arrays</li>
+                    <li>Singly and doubly linked lists</li>
+                    <li>Stacks</li>
+                    <li>Queues</li>
+                    <li><strong>Binary search trees</strong></li>
+                    <li>Search trees properties</li>
+                    <li>Heaps</li>
+                    <li>Graph representation</li>
+                    <li>Sorting algorithms</li>
+                    <li><strong>Time and space complexity</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right cellbio_info" id="cellbio_info">
+            <div class="info_box_header">
+                <h1>Cellular biology</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Cellular structure and function</li>
+                    <li>Cell differentiation and maturation</li>
+                    <li>Cell histology and microscopy analysis</li>
+                    <li><strong>Cellular signaling and mechanotransduction</strong></li>
+                    <li><strong>Immune and complement system</strong></li>
+                    <li>Composition, structure and function of hypocellular load bearing tissues (ligaments and tendons)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left clang_info" id="clang_info">
+            <div class="info_box_header">
+                <h1>C language programming</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>C programming</strong></li>
+                    <li>Computer architecture</li>
+                    <li>Fundamental data types</li>
+                    <li>Arrays</li>
+                    <li>String manipulation</li>
+                    <li>File operations</li>
+                    <li>Macros</li>
+                    <li>Bitwise operations</li>
+                    <li><strong>Linux</strong></li>
+                    <li>Bash shell</li>
+                    <li>SSH</li>
+                    <li><strong>Version control</strong> using GitLab (McMaster's equivalent of GitHub)</li>
+                    <li>Functions and function prototypes</li>
+                    <li>Standard libraries</li>
+                    <li>Pass by reference / pass by variable</li>
+                    <li>Recursion</li>
+                    <li>Sorting algorithms: Bubble sort, insertion sort, shell sort</li>
+                    <li>Binary search</li>
+                    <li><strong>Time complexity analysis with Big O notation</strong></li>
+                    <li><strong>Pointers</strong></li>
+                    <li>Memory allocation and managemnt</li>
+                    <li><strong>Structs</strong></li>
+                    <li>Binary logic</li>
+                    <li>One's complement and two's complement</li>
+                    <li>Graph theory</li>
+                    <li>Linked lists</li>
+                    <li>Binary trees</li>
+                    <li>Depth and breadth first search</li>
+                    <li>Preprossor commands</li>
+                    <li><strong>Assembly programming using ARM architecture in VisUAL</strong></li>
+                    <li>Makefiles</li>
+                    <li>Profiling using gprof</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left signals_info" id="signals_info">
+            <div class="info_box_header">
+                <h1>Signals analysis and filter design</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Frequency response characterization via system transfer function</strong></li>
+                    <li>Conceptual and applicable knowledge of: low pass, high pass, band pass, band stop and notch filters</li>
+                    <li><strong>Filter design using NI Multisim and frequency analysis using Bode plots</strong></li>
+                    <li>Able to interpret filter magnitude and phase response</li>
+                    <li>Passive filter design using Maple for transfer function mathematics</li>
+                    <li><strong>Types of systems: causality, linearity, time-invariance and memory</strong></li>
+                    <li>Sampling theory: Nyquist frequency, quantization accuracy</li>
+                    <li>Continuous time and discrete time signal convolution</li>
+                    <li><strong>Trigonometric/complex Fourier series and Fourier transforms</strong></li>
+                    <li>Inverse, discrete and fast Fourier transforms</li>
+                    <li>Laplace transforms</li>
+                    <li>Bandlimited and time-limited signals</li>
+                    <li>Gibbs phenomenon and Parseval's Theorem</li>
+                    <li><strong>Signal modulation (amplitude and frequency modulation)</strong></li>
+                    <li><strong>Importance of Nyquist sampling criterion to avoid aliasing</strong></li>
+                    <li><strong>Fourier and spectral analysis of biomedical signals (EMG, ECG, EEG, EOG) in matlab</strong></li>
+                    <li>Understand tradeoff between Butterworth and Chebyshev filters</li>
+                    <li><strong>Hands on filter design for physiologic signals (EMG, ECG, EEG, EOG)</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right orgchem_info" id="orgchem_info">
+            <div class="info_box_header">
+                <h1>Organic chemistry</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Stereochemistry</li>
+                    <li>Influence of charge distribution on reactivity</li>
+                    <li>Nuclear resonance imagery</li>
+                    <li>IR spectroscopy</li>
+                    <li>Molecular orbital theory</li>
+                    <li>VSEPR theory</li>
+                    <li>IUPAC organic molecule nomenclature line bond structure</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right stats_info" id="stats_info">
+            <div class="info_box_header">
+                <h1>Statistical methods in biomedical engineering</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Standard deviation and variance</li>
+                    <li>Data representation through bar graphs, line plots, box plots and scatter plots</li>
+                    <li>Normal distribution and data skew</li>
+                    <li>Set theory, permutations, combinations and probability of joint events</li>
+                    <li><strong>Conditional probability and Bayes' theorem</strong></li>
+                    <li><strong>Receiver Operating Characteristic (ROC) statistics</strong>
+                        <ul>
+                            <li>Sensitivity, specificity and area under the curve (AUC)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Discrete and continuous probability distributions</strong></li>
+                    <li>Gaussian and Poisson distribution</li>
+                    <li>Inferential statistics
+                        <ul>
+                            <li>Central limit theorem</li>
+                            <li>Confidence and prediction intervals</li>
+                            <li><strong>Student "t" distribtion</strong></li>
+                            <li>Chi-Square distribution</li>
+                        </ul>
+                    </li>
+                    <li>One/two sample hypothesis testing
+                        <ul>
+                            <li>Strategies to minimize type I and II error</li>
+                            <li>Paired t-tests for equal and unequal variances</li>
+                        </ul>
+                    </li>
+                    <li><strong>Analysis of variance (ANOVA)</strong></li>
+                    <li>Bonferroni correction for multiple comparisons</li>
+                    <li>Hypothesis testing on variance and goodness of fit indicators</li>
+                    <li><strong>non-parametric statistical tests (Wilcoxon signed rank and Mann Whitney U)</strong></li>
+                    <li>Correlation, covariance and confounding variables</li>
+                    <li><strong>Simple and multiple Ordinary Least Squares (OLS) regression</strong></li>
+                    <li>Bivariate normal distributions and interaction effects</li>
+                    <li><strong>Contour plots, surface plots and gradient ascent/descent</strong></li>
+                    <li>Model building and refining for experimental datasets
+                        <ul>
+                            <li>Demonstrated in full factorial experiment benchmarking CPU performance as a function of program complexity</li>
+                        </ul>
+                    </li>
+                    <li>Experiment design: full factorial, fractional and blocking techniques</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right critap_info" id="critap_info">
+            <div class="info_box_header">
+                <h1>Critical appraisal of medical literature</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Statistical power and error</li>
+                    <li>Randomized control trial design</li>
+                    <li>Study types:
+                        <ul>
+                            <li>Observational studies</li>
+                            <li>RCT</li>
+                            <li>Cohort studies</li>
+                            <li>Case control studies</li>
+                        </ul>
+                    </li>
+                    <li>Internal validity and external validity assessment</li>
+                    <li>Risk of bias frameworks</li>
+                    <li><strong>Meta analysis and systematic reviews</strong></li>
+                    <li>Confidence interval interpretation</li>
+                    <li>Model building and overfitting</li>
+                    <li>Evaluate the validity of studies attempting to benchmark a novel diagnostic test by calculating:
+                        <ul>
+                            <li>Sensitivity</li>
+                            <li>Specificity</li>
+                            <li>AUC</li>
+                            <li>ROC statistics</li>
+                            <li>Likelihood ratios</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right geneticeng_info" id="geneticeng_info">
+            <div class="info_box_header">
+                <h1>Genetic engineering</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Utilized synthetic biology to create synthetic gene networks (biological circuits)</strong></li>
+                    <li>Strong understanding of cellular central dogma
+                        <ul>
+                            <li>DNA structure and replication</li>
+                            <li>Protein synthesis</li>
+                            <li>DNA transcription</li>
+                            <li>RNA translation</li>
+                        </ul>
+                    </li>
+                    <li>Describe and read synthetic biology designs using <strong>Synthetic Biology Open Language (SBOL)</strong></li>
+                    <li>Understand promoter/operator dynamics to create biological gates</li>
+                    <li>Theoretical and laboratory experience with Polymerase Chain Reaction (PCR)</li>
+                    <li>Restriction enzyme selection to cleave specific plasmid palindrome sequences for gene ligation</li>
+                    <li>Theoretical and laboratory hands on experience with gel electrophoresis</li>
+                    <li><strong>DNA extraction</strong> (lysis, separation, purification, analysis)</li>
+                    <li>Experimental design and control selection</li>
+                    <li>Microbial cell counting</li>
+                    <li>Serial dilutions</li>
+                    <li>Cellular population dynamics and growth rate calculations</li>
+                    <li>Methods of forced microbial gene transfer (electroporation and head shock)</li>
+                    <li><strong>Utilized differential equations to model concentrations of interest in biological circuits</strong></li>
+                    <li>Ethics of synthetic biology</li>
+                    <li>Designed biological circuit to regulate <strong>Adenovirus-mediated transfer of neurotrophin-3</strong> in the effort to <strong>remylenate peripheral nerve cells</strong> as a <strong>novel treatment for Charcot Marie Tooth neuropathy</strong>
+                        <ul>
+                            <li>Used <strong>Benchling</strong> to model the recombinant plasmid</li>
+                            <li>Used <strong>NCBI BLAST</strong> to search for known protein producing genetic code</li>
+                            <li>Used <strong>Matlab SimBiology</strong> to model biological circuit</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right anatphys_info" id="anatphys_info">
+            <div class="info_box_header">
+                <h1>Anatomy and physiology</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Cell histology, structure and funciton</li>
+                    <li>Central nervous system and peripheral nervous system</li>
+                    <li>Immunology</li>
+                    <li>Muscular skeletal structure</li>
+                    <li>Physiological systems
+                        <ul>
+                            <li>Cardiovascular</li>
+                            <li>Respiratory</li>
+                            <li>Gastro-intestinal</li>
+                            <li>Reproductive</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right research_info" id="research_info">
+            <div class="info_box_header">
+                <h1>Nanostructure metal oxide research</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Researched metal oxide nanostructures to detect neurotransmitters</strong></li>
+                    <li>Discovered and functionalized copper oxide nanostructure selective for glutamate</li>
+                    <li>Utilized cyclic voltammetry and linear sweep voltammetry to characterize electrochemical reaction between glutamate and potassium chloride</li>
+                    <li>Constructed linear regression model to determine dose-response curve
+                        <ul>
+                            <li>The sensor was able to<strong> determine glutamate concentrations with 99.02% accuracy</strong></li>
+                        </ul>
+                    </li>
+                    <li>Copper oxide non enzymatic sensor was <strong>88x more sensitive</strong> than comparable metal oxide non-enzymatic sensors</li>
+                    <li>Designed, planned, executed and communicated experiment findings to supervising professor and team of PhD students</li>
+                    <li><strong>Peer reviewed and published in Biosensors journal</strong> <a href="https://www.mdpi.com/2079-6374/13/2/237">(Published paper link here)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_right electrochem_info" id="electrochem_info">
+            <div class="info_box_header">
+                <h1>Electrochemistry</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Electron transfer and redox reactions</li>
+                    <li>Electrochemical cells</li>
+                    <li>Cell potential, equilibrium and Nernst equation</li>
+                    <li>Measuring concentrations with electrochemical cells</li>
+                    <li>Cyclic voltammetry</li>
+                    <li>Linear sweep voltammetry</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left vectorcalc_info" id="vectorcalc_info">
+            <div class="info_box_header">
+                <h1>Vector calculus</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Fourier series</strong></li>
+                    <li>Line, surface and volume integrals</li>
+                    <li>Divergence, Green's and Stoke's theorems</li>
+                    <li>Double integrals in polar coordinates</li>
+                    <li>Gibbs Phenomenon</li>
+                    <li>Taylor series</li>
+                    <li>Power series</li>
+                    <li>Polar and cylindrical coordinates</li>
+                    <li>Jacobian conversions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left diffeqns_info" id="diffeqns_info">
+            <div class="info_box_header">
+                <h1>Differential equations</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Heat and wave equations</li>
+                    <li><strong>Laplace transform</strong></li>
+                    <li><strong>Partial differential equations</strong></li>
+                    <li>Cauchy-Euler equations</li>
+                    <li>Non linear equations</li>
+                    <li>Initial-value and boundary-value problems</li>
+                    <li><strong>Dirac delta</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left linalg_info" id="linalg_info">
+            <div class="info_box_header">
+                <h1>Linear algebra</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Linear systems of equations using matrices</strong></li>
+                    <li>Linear independence</li>
+                    <li>Determinants</li>
+                    <li>Eigenvalues</li>
+                    <li>Eigenvectors</li>
+                    <li>diagonalization</li>
+                    <li><strong>Complex numbers</strong></li>
+                    <li>Subspaces</li>
+                    <li>Spanning sets</li>
+                    <li>Change of base</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left datasql_info" id="datasql_info">
+            <div class="info_box_header">
+                <h1>Databases and SQL</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Relational database model</strong></li>
+                    <li><strong>Entity relationship model</strong></li>
+                    <li>Weak entity sets</li>
+                    <li>ISA hierarchies</li>
+                    <li>Levels of abstraction</li>
+                    <li>Materialized and virtual views</li>
+                    <li>Schemas</li>
+                    <li>Integrity constraints</li>
+                    <li>Referential constraints</li>
+                    <li>Keys, superkeys, candidate keys and foreign keys</li>
+                    <li><strong>Clustered and unclustered indices</strong></li>
+                    <li>Index remodeling using B+ trees</li>
+                    <li><strong>SQL (DB2)</strong></li>
+                    <li>SQL operators, joins, aggregation and grouping</li>
+                    <li>Bag and set semantics</li>
+                    <li><strong>Relational algebra</strong></li>
+                    <li>Functional dependencies</li>
+                    <li><strong>Armstrong's Axioms</strong></li>
+                    <li>FD closure</li>
+                    <li>Minimal basis</li>
+                    <li>lossless schema decomposition</li>
+                    <li><strong>Normal forms (1NF, 2NF, 3NF, BCNF)</strong></li>
+                    <li><strong>Transaction and concurrency</strong></li>
+                    <li>Transaction properties: atomicity, consistency, isolation and durability</li>
+                    <li>Schedule types: serializable, conflict serializable, conflict serializable, strict, recoverable and avoid cascading abort (ACA)</li>
+                    <li>Conflict types: Lost updates, dirty reads, unrepeatable reads</li>
+                    <li>Two phase locking and strict two phase locking</li>
+                    <li>SQL isolation levels</li>
+                    <li>Locking granularity</li>
+                    <li><strong>Deadlocks and deadlock prevention (wound-wait / wait-die)</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left embdesign_info" id="embdesign_info">
+            <div class="info_box_header">
+                <h1>Embedded systems design</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Register transfer level understanding of CPU execution</strong></li>
+                    <li><strong>Peripherals:</strong> Timers, PWM, ADC, GPIO</li>
+                    <li><strong>Communications:</strong> I2C, SPI, UART, CAN</li>
+                    <li>Strong understanding of timing diagrams</li>
+                    <li>Error correction and parity bit</li>
+                    <li><strong>Interrupt Service Handler leveraging CMIS library</strong></li>
+                    <li>Interrupt priority and external interrupts (EXTI)</li>
+                    <li><strong>Design considerations with respect to power, performance, size, and non-recurring engineering costs</strong></li>
+                    <li><strong>Single purpose processor design using FSMD (finite state machine with datapath)</strong></li>
+                    <li>General purpose processor architecture</li>
+                    <li>Combinational and sequential logic</li>
+                    <li>pMOS and nMOS gate design</li>
+                    <li>Combinational components: Multiplexores, decoders, adders, comparators, nbit ALU</li>
+                    <li>Sequential components: Shift registers and counters</li>
+                    <li>Pipelining</li>
+                    <li>Real time clock (RTC) and crystal inaccuracy</li>
+                    <li>Brushless DC motors</li>
+                    <li>Stepper motors: full stepping, half stepping and microstepping</li>
+                    <li>H-bridge circuit theory</li>
+                    <li>Floating point and fixed point arithmetic</li>
+                    <li><strong>ARM instruction set</strong></li>
+                    <li><strong>Assembly programming with ARM</strong></li>
+                    <li>Assembly flow control</li>
+                    <li><strong>Operational amplifers</strong></li>
+                    <li>Impedence matching</li>
+                    <li>Transfer functions</li>
+                    <li>Common mode rejection ratio analysis</li>
+                    <li><strong>Passive and active filter design</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left pcbdesign_info" id="pcbdesign_info">
+            <div class="info_box_header">
+                <h1>PCB design</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Kicad</strong> schematic creation and routing experience</li>
+                    <li>Custom low voltage PCB creation leveraging passive components and ICs</li>
+                    <li>Linked projects demonstrating applied skill
+                        <ul>
+                            <li>Links coming soon</li>
+                            <li><a href="">Flashing LED PCB using NE555</a></li> <!-- Link to project 20 -->
+                            <li><a href="">PCB Traffic light</a></li>            <!-- Link to project 21 -->
+                            <li><a href="">PCB low voltage regulator</a></li>    <!-- Link to project 22 -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left python_info" id="python_info">
+            <div class="info_box_header">
+                <h1>Python</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Industry experience using Python for Developer Operations in Military Defence</strong>
+                        <ul>
+                            <li>Used Python to tag and document release code ensuring <strong>traceability for every customer or internally developed release</strong></li>
+                            <li>Python release control deployed using <strong>Jenkins</strong> managed through <strong>Dockerization</strong></li>
+                        </ul>
+                    </li>
+                    <li>Hobbyist experience <strong>developing on Raspberry Pi 1, 2 and 4 for 10+ years</strong></li>
+                    <li>Strong understanding of:
+                        <ul>
+                            <li>Functions</li>
+                            <li>Recursion</li>
+                            <li>Data structures</li>
+                            <li>Classes</li>
+                            <li>Object Oriented Design and Programming</li>
+                            <li>Modularity</li>
+                            <li>Encapsulation</li>
+                            <li>Code reusability</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left webdev_info" id="webdev_info">
+            <div class="info_box_header">
+                <h1>Frontend web design</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Personal portfolio built from ground up using HTML, CSS and JavaScript</strong></li>
+                    <li>Strong knowledge of:
+                        <ul>
+                            <li>Selectors</li>
+                            <li>Hover effects</li>
+                            <li>Image placement</li>
+                            <li>User Interface / User Experience (UI/UX)</li>
+                            <li>Interactive design using JavaScript</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left devops_info" id="devops_info">
+            <div class="info_box_header">
+                <h1>Developer operations</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Created and maintained Python developer tools <strong>for a team of 50+ developers</strong></li>
+                    <li>Troubleshooted and fixed urgent production bugs to remove blockers for other departments</li>
+                    <li>Served as critical weekend support ensuring critical releases were generated without issue</li>
+                    <li><strong>Consulted other departments on collaborative software workflows (Git, Jira, Bitbucket)</strong></li>
+                    <li>Refactored backend code to expand release build throughput to accelerate cross-team workflows and <strong>halfed the time from release request to having the release uploaded to Teamcenter 14</strong></li>
+                    <li>Strong understanding of unit testing and test automation using Jenkins</li>
+                    <li><strong>Created novel test suite using Docker, Jenkins and Pytest</strong> to maximize uptime of firmware SVN repository server</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left docker_info" id="docker_info">
+            <div class="info_box_header">
+                <h1>Docker</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Supported the dockerization of an internally developed company application by:
+                        <ul>
+                            <li><strong>Beta testing</strong> the application and reporting back bugs</li>
+                            <li><strong>Writing custom Pytest</strong> cases to maximize uptime of novel dockerized application</li>
+                            <li>Lobbying IT department for the acquisition of a new server cluster to house the dockerized application</li>
+                            <li><strong>Training employees</strong> how to use new dockerized application</li>
+                            <li><strong>Contributing to help documentation</strong> on how to initialize, troubleshoot and operate novel dockerized application</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left jenkins_info" id="jenkins_info">
+            <div class="info_box_header">
+                <h1>Jenkins</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Created custom Jenkins pipelines in <strong>Groovy syntax</strong> to run Python release automation scripts and upload the produced binaries/hex files to their proper archive location</li>
+                    <li><strong>Managed multi-repository pipelines</strong> that would pull configuration data as well as base source code to compile a customer specific release</li>
+                    <li>Created and maintained Jenkins pipelines running Pytest scripts to ensure adequate test coverage on release generation procedure</li>
+                    <li><strong>Crucial team support whenever Jenkins pipelines would block releases</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left electromag_info" id="electromag_info">
+            <div class="info_box_header">
+                <h1>Electricity and magnetism</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Electromagnetic waves</li>
+                    <li>Phase lag and phase lead</li>
+                    <li>Wave traversal in lossy media</li>
+                    <li>Fundamental knowledge of electromagnetic spectrum</li>
+                    <li>Root Mean Squared (RMS) power, voltage and current</li>
+                    <li><strong>Phasors and phasor notation</strong></li>
+                    <li>Transmission line lumped parameter model (resistance, inductance, capacitance and conductance)</li>
+                    <li><strong>Transmission line equations</strong></li>
+                    <li>Dispersion and signal breakdown</li>
+                    <li>Impedance matching and forward/reflected waves</li>
+                    <li><strong>Gradient, curl and divergence</strong></li>
+                    <li><strong>Electrostatics, magnetostatics and electrodynamics</strong></li>
+                    <li>Conductors, semiconductors and dielectrics</li>
+                    <li>Electrostatic boundary conditions as it relates to dielectric stacks</li>
+                    <li>Important electromagnetic laws: <strong>Kirchhoff's voltage/current, Biot-Savart, Lenz's, Gauss' electrostatic and magnetism, Ampere's and Faraday's laws</strong></li>
+                    <li><strong>Maxwell's equations</strong></li>
+                    <li>Mutual inductance and self inductance</li>
+                    <li>Motional electromatnetic fields</li>
+                    <li><strong>Electromagnetic transformers, generators and motors</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left compdyn_info" id="compdyn_info">
+            <div class="info_box_header">
+                <h1>Computational dynamics</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li><strong>Newtonian</strong> and <strong>Lagrangian</strong> mechanics</li>
+                    <li>Calculations performed in Maple and <strong>simulated using numerical analysis</strong> via Flex PDE</li>
+                    <li>Topics covered:
+                        <ul>
+                            <li>Forces, energy, torques, linear and angular momentum</li>
+                            <li>Planar mechanics in linear and rotating coordinate systems</li>
+                            <li>Planar energy, momentum and Lagrange equations</li>
+                            <li>Mass spring damper systems (harmonic motion and resonance)</li>
+                            <li><strong>Advanced dynamics problems: rocketry, realistic air resistance, electrical force dynamics and central field problems</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info_box_left statics_info" id="statics_info">
+            <div class="info_box_header">
+                <h1>Statics analysis</h1>
+                <p>Click on skill bubble to <strong>lock and unlock</strong> info boxes.</p>
+            </div>
+            <div class="info_box_text">
+                <ul>
+                    <li>Vector operations (addition, subtraction, scaling and crossing)</li>
+                    <li><strong>Static force equilibrium problems</strong></li>
+                    <li>Torques and moments</li>
+                    <li><strong>Non linear distributed loading problems</strong></li>
+                    <li>Structural analysis (trusses and zero force members)</li>
+                    <li>Internal and shear force analysis</li>
+                    <li><strong>Non linear shear and moment diagrams</strong></li>
+                    <li>Distributed load, shear and moment integration relationship</li>
+                    <li>Centroid moment of inertia and radius of gyration calculations</li>
+                    <li><strong>Mohr's circle</strong></li>
+                    <li>Conservative forces</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/JavaScript/skills.js"></script>
+    </body>
+</html>
