@@ -311,39 +311,109 @@ const objectInfoBox = {
 let grid_item_width = "200"
 
 function skillObjEnableHoverEffects(objectId) {
-    // Enable hover effects and make info box visible
-    console.log("Enabling Hover effect for " +objectId )
-    skillObjectInfoId = objectInfoBox[objectId]
+    if (!lockingActive) {
+        // Enable hover effects and make info box visible
+        skillObjectInfoId = objectInfoBox[objectId]
 
-    // Get objects
-    skillObject = document.getElementById(objectId)
-    skillObjectInfo = document.getElementById(skillObjectInfoId)
+        // Get objects
+        skillObject = document.getElementById(objectId)
+        skillObjectInfo = document.getElementById(skillObjectInfoId)
 
-    // Make info box visible
-    skillObjectInfo.style.visibility = "visible"
-    skillObjectInfo.style.opacity = 1
+        // Make info box visible
+        skillObjectInfo.style.visibility = "visible"
+        skillObjectInfo.style.opacity = 1
 
-    // Enable drop shadow effect
-    skillObject.style.boxShadow = "0px 0px 30px"
-    skillObject.style.width = `${grid_item_width * 1.20}px`
+        // Enable drop shadow effect
+        skillObject.style.boxShadow = "0px 0px 30px"
+        skillObject.style.width = `${grid_item_width * 1.20}px`
+    }
 }
 
 
 function skillObjectDisableHoverEffects(objectId) {
-    // Disable hover effects and make info box hidden
+    if (!lockingActive) {
+        // Disable hover effects and make info box hidden
+        skillObjectInfoId = objectInfoBox[objectId]
+
+        // Get objects
+        skillObject = document.getElementById(objectId)
+        skillObjectInfo = document.getElementById(skillObjectInfoId)
+
+        // Make info box visible
+        skillObjectInfo.style.visibility = "hidden"
+        skillObjectInfo.style.opacity = 0
+
+        // Enable drop shadow effect
+        skillObject.style.boxShadow = "0px 0px 0px"
+        skillObject.style.width = `${grid_item_width}px`
+    }
+}
+
+infoBoxLocked = {
+    // Info box id  locked status
+    "inquiry_info"    : 0,
+    "datastr_info"    : 0,
+    "cellbio_info"    : 0,
+    "clang_info"      : 0,
+    "signals_info"    : 0,
+    "orgchem_info"    : 0,
+    "stats_info"      : 0,
+    "critap_info"     : 0,
+    "geneticeng_info" : 0,
+    "anatphys_info"   : 0,
+    "research_info"   : 0,
+    "electrochem_info": 0,
+    "vectorcalc_info" : 0,
+    "diffeqns_info"   : 0,
+    "linalg_info"     : 0,
+    "datasql_info"    : 0,
+    "embdesign_info"  : 0,
+    "pcbdesign_info"  : 0,
+    "python_info"     : 0,
+    "webdev_info"     : 0,
+    "devops_info"     : 0,
+    "docker_info"     : 0,
+    "jenkins_info"    : 0,
+    "electromag_info" : 0,
+    "compdyn_info"    : 0,
+    "statics_info"    : 0,
+}
+
+let lockingActive = 0 // Allows other functions to know if locking is in effect
+
+function lockSkillObject(objectId) {
+    // When skill object is clicked, toggle info box visibility keep information box visible even when skill object is moused off
     skillObjectInfoId = objectInfoBox[objectId]
+    lockedStatus = infoBoxLocked[skillObjectInfoId]
 
     // Get objects
     skillObject = document.getElementById(objectId)
-    skillObjectInfo = document.getElementById(skillObjectInfoId)
+    skillObjectInfoBox = document.getElementById(skillObjectInfoId)
 
-    // Make info box visible
-    skillObjectInfo.style.visibility = "hidden"
-    skillObjectInfo.style.opacity = 0
+    if (lockedStatus == 1) {
+        // Unlock informataion box
+        lockingActive = 0
 
-    // Enable drop shadow effect
-    skillObject.style.boxShadow = "0px 0px 0px"
-    skillObject.style.width = `${grid_item_width}px`
+        // Change border colour back to black
+        skillObject.style.border = "1px solid black"
+        infoBoxLocked[skillObjectInfoId] = 0 // Update locked status
+    }
+
+    else if (lockingActive == 0) {
+        // Lock information box if no other boxes are locked
+        skillObjectInfoBox.style.visibility = 'visible'
+        skillObjectInfoBox.style.opacity = 1
+
+        // Lock drop shadow effect
+        skillObject.style.boxShadow = "0px 0px 30px"
+        skillObject.style.width = `${grid_item_width * 1.20}px`
+
+        // Change border to be red to indicate that locking has occured
+        skillObject.style.border = "5px solid red"
+
+        lockingActive = 1
+        infoBoxLocked[skillObjectInfoId] = 1 // Update locked status
+    }
 }
 
 updateInfoBoxPos()
