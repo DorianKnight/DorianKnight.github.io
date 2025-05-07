@@ -1,0 +1,191 @@
+/***
+* Author: Dorian Knight
+* Date: May 5th 2025
+* Description: Style sheet for index.html
+***/
+
+:root {
+    /* Used to store variables */
+
+    /* Colours */
+    --theme-primary: #486CFC;
+    --theme-secondary: #DBE5F3;
+    --theme-highlight: #AFF4C6;
+    --bash-green: #5C8E27;
+    --bash-blue: #345E91;
+    --light-gray: #BEBEBE;
+
+    /* Text Size */
+    --title-size: 6em;
+    --subtitle-size: 4em;
+    --large-size: 2em;
+    --regular-size: 1em;
+
+    /* Text weights/strengths */
+    --text-black: 900;
+    --text-extrabold: 800;
+    --text-bold: 700;
+    --text-semibold: 600;
+    --text-medium: 500;
+    --text-regular: 400;
+    --text-light: 300;
+    --text-extralight: 200;
+    --text-thin: 100;
+
+    /* Transition speeds */
+    --slow-transition: 1.5s;
+    --medium-transition: 1.0s;
+    --fast-transition: 0.5s;
+    --turbo-transition: 0.2s;
+}
+
+body {
+    font-family: "Geist", sans-serif;
+}
+
+/* ############# Navigation bar styling ############# */
+.navbar>.main-menu {
+    text-align: center;
+    font-size: 1.5vw;
+    word-spacing: 5vw;
+    margin-top: 3%;
+}
+
+.navbar>.main-menu>.container {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5% 1.5%;
+    margin: auto;
+    font-weight: var(--text-regular);
+    border-radius: 5vw;
+    transition: var(--fast-transition);
+    width: 10vw;
+}
+
+.navbar>.main-menu>.container>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ############# Header styling ############# */
+.title {
+    margin: 10% auto;
+}
+
+.header_container {
+    background-color: var(--theme-primary);
+    margin-left: 23vw;
+    margin-right: 23vw;
+}
+
+h1 {
+    padding: 5% 0% 0% 2%;
+    margin: 0;
+    color: white;
+    font-weight: var(--text-regular);
+    font-size: 6vw;
+    text-align: left;
+    box-shadow: 5px 3px 5px var(--light-gray);
+
+}
+
+.subtitle_container {
+    background-color: var(--theme-secondary);
+    margin-left: 22vw;
+    margin-right: 18vw;
+}
+
+h2 {
+    padding: 0% 0% 0% 4%;
+    margin: 0;
+    color: black;
+    font-weight: var(--text-bold);
+    font-size: 2.5vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+.header_links {
+    margin-left: 23vw;
+    margin-right: 23vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.header_links>.portfolio {
+    margin-left: 0vw;
+    margin-right: 1.5vw;
+    display: flex;
+}
+
+.header_links>.portfolio>a {
+    text-decoration: none;
+}
+
+.header_links>.portfolio>a>.portfolio_btn {
+    display: flex;
+    background-color: var(--theme-highlight);
+    border: none;
+    font-size: 2vw;
+    padding: 0.5vw 4vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header_links>.resume {
+    display: flex;
+}
+
+.header_links>.resume>a {
+    text-decoration: none;
+}
+
+.header_links>.resume>a>.resume_btn {
+    display:flex;
+    background-color: var(--theme-highlight);
+    border: none;
+    font-size: 2vw;
+    padding: 0.5vw 4vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+.header_links>.linkedin_contact {
+    display: flex;
+    width: 4.5vw;
+    padding: 0% 0% 0% 5%;
+}
+
+.header_links>.linkedin_contact>a {
+    display: flex;
+}
+
+.header_links>.email_contact {
+    display: flex;
+    width: 4.5vw;
+    padding: 0% 0% 0% 1%;
+}
+
+.header_links>.email_contact>a {
+    display: flex;
+}
+
+.header_links>.github_contact>a {
+    display: flex;
+}
+
+.header_links>.github_contact {
+    display: flex;
+    width: 4.2vw;
+    padding: 0% 0% 0% 1%;
+}
+
+/* ############# About me styling ############# */
