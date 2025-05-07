@@ -16,10 +16,10 @@
     --light-gray: #BEBEBE;
 
     /* Text Size */
-    --title-size: 6em;
-    --subtitle-size: 4em;
-    --large-size: 2em;
-    --regular-size: 1em;
+    --title-size: 6vw;
+    --subtitle-size: 4vw;
+    --large-size: 2.5vw;
+    --regular-size: 1vw;
 
     /* Text weights/strengths */
     --text-black: 900;
@@ -84,7 +84,7 @@ h1 {
     margin: 0;
     color: white;
     font-weight: var(--text-regular);
-    font-size: 6vw;
+    font-size: var(--title-size);
     text-align: left;
     box-shadow: 5px 3px 5px var(--light-gray);
 
@@ -101,7 +101,7 @@ h2 {
     margin: 0;
     color: black;
     font-weight: var(--text-bold);
-    font-size: 2.5vw;
+    font-size: var(--large-size);
     box-shadow: 5px 3px 5px var(--light-gray);
 }
 
@@ -189,3 +189,106 @@ img {
 }
 
 /* ############# About me styling ############# */
+.aboutme_section {
+    display: flex;
+    align-items: center;
+}
+
+.aboutme_section>.aboutme_background {
+    background-color: var(--theme-secondary);
+    box-shadow: 5px 3px 5px var(--light-gray);
+    margin-left: 15vw;
+    margin-right: auto;
+    width: 50vw;
+    border-radius: 5vw 0vw 0vw 5vw;
+}
+.aboutme_section>.aboutme_background>.aboutme_textbox {
+    text-align: center;
+    margin-left: 2vw;
+    margin-right: 8vw;
+    /* width: 40vw; */
+    /* margin-right: 30vw;  */
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.aboutme_heading {
+    font-size: var(--subtitle-size);
+    font-weight: var(--text-regular);
+    box-shadow: none;
+    padding: 0;
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.bash_joke {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--regular-size);
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.bash_joke>.bash_icon {
+    width: 5vw;
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.bash_joke>.specific_computer {
+    color: var(--bash-green);
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.bash_joke>.pathwaydirectory {
+    color: var(--bash-blue);
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.details_textbox {
+    margin: auto;
+    width: 40vw;
+    font-size: var(--regular-size);
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.readmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    /* margin-right: 6vw; */
+    margin-left: auto;
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.readmore>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.readmore>a>.readmore_text {
+    margin: 1vw 0.5vw;
+    font-size: var(--regular-size);
+    color: black;
+}
+
+.aboutme_section>.aboutme_background>.aboutme_textbox>.readmore>a>.readmore_arrow {
+    width: 1.5vw;
+    height: 1vw;
+}
+
+.aboutme_section>.aboutme_image {
+    /* background: var(--theme-primary); */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    right: 15%;
+    position: absolute;
+    /* right: 20%; */
+    /* margin-right: 0vw; */
+    border-radius: 50%;
+    --drop-shadow-dist: 1.5vw;
+    /* calc(20 - 10); */
+    filter: drop-shadow(var(--drop-shadow-dist) var(--drop-shadow-dist) 0px var(--theme-primary));
+    /* box-shadow: 10px 10px 0px var(--theme-primary); */
+
+}
+
+.aboutme_section>.aboutme_image>.dorian_headshot {
+    border: none;
+    outline: black;
+}
+
+/* Note to self, make sure all sizes are parameterized using a variable so it can be easily changed*/
