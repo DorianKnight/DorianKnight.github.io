@@ -77,6 +77,8 @@ body {
     background-color: var(--theme-primary);
     margin-left: 23vw;
     margin-right: 23vw;
+    border-radius: 1vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
 }
 
 h1 {
@@ -86,14 +88,14 @@ h1 {
     font-weight: var(--text-regular);
     font-size: var(--title-size);
     text-align: left;
-    box-shadow: 5px 3px 5px var(--light-gray);
-
 }
 
 .subtitle_container {
     background-color: var(--theme-secondary);
     margin-left: 22vw;
     margin-right: 18vw;
+    border-radius: 1vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
 }
 
 h2 {
@@ -102,7 +104,6 @@ h2 {
     color: black;
     font-weight: var(--text-bold);
     font-size: var(--large-size);
-    box-shadow: 5px 3px 5px var(--light-gray);
 }
 
 .header_links {
@@ -134,6 +135,17 @@ h2 {
     box-shadow: 5px 3px 5px var(--light-gray);
     cursor: pointer;
     text-decoration: none;
+    border-radius: 1vw;
+    transition: var(--turbo-transition);
+    border-color: rgb(255, 255, 255, 0);
+    border-style: solid;
+}
+
+.header_links>.portfolio:hover .portfolio_btn{
+    opacity: 0.7;
+    border-style: solid;
+    border-color: var(--theme-secondary);
+
 }
 
 .header_links>.resume {
@@ -152,6 +164,16 @@ h2 {
     padding: 0.5vw 4vw;
     box-shadow: 5px 3px 5px var(--light-gray);
     cursor: pointer;
+    border-radius: 1vw;
+    transition: var(--turbo-transition);
+    border-color: rgb(255, 255, 255, 0);
+    border-style: solid;
+}
+
+.header_links>.resume:hover .resume_btn {
+    opacity: 0.7;
+    border-style: solid;
+    border-color: var(--theme-secondary);
 }
 
 img {
@@ -261,6 +283,7 @@ img {
     margin: 1vw 0.5vw;
     font-size: var(--regular-size);
     color: black;
+    transition: var(--fast-transition);
 }
 
 .aboutme_section>.aboutme_background>.aboutme_textbox>.readmore>a>.readmore_arrow {
@@ -289,6 +312,10 @@ img {
 .aboutme_section>.aboutme_image>.dorian_headshot {
     border: none;
     outline: black;
+}
+
+.aboutme_background>.aboutme_textbox>.readmore:hover>a>.readmore_text{
+    color: var(--theme-primary);
 }
 
 /* Note to self, make sure all sizes are parameterized using a variable so it can be easily changed*/

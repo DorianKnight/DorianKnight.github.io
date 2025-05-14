@@ -1,0 +1,353 @@
+/***
+* Author: Dorian Knight
+* Date: May 13th 2025
+* Description: Style sheet for about.html
+***/
+
+:root {
+    /* Used to store variables */
+
+    /* Colours */
+    --theme-primary: #486CFC;
+    --theme-secondary: #DBE5F3;
+    --theme-highlight: #AFF4C6;
+    --bash-green: #5C8E27;
+    --bash-blue: #345E91;
+    --light-gray: #BEBEBE;
+
+    /* Text Size */
+    --title-size: 6vw;
+    --subtitle-size: 4vw;
+    --large-size: 2.5vw;
+    --medium-size: 1.5vw;
+    --regular-size: 1vw;
+
+    /* Text weights/strengths */
+    --text-black: 900;
+    --text-extrabold: 800;
+    --text-bold: 700;
+    --text-semibold: 600;
+    --text-medium: 500;
+    --text-regular: 400;
+    --text-light: 300;
+    --text-extralight: 200;
+    --text-thin: 100;
+
+    /* Transition speeds */
+    --slow-transition: 1.5s;
+    --medium-transition: 1.0s;
+    --fast-transition: 0.5s;
+    --turbo-transition: 0.2s;
+
+    /* Box style settings */
+    --box-width: 30vw;
+
+    /* Skills grid settings */
+    --skill-container-size: 5vw;
+}
+
+body {
+    font-family: "Geist", sans-serif;
+    height: fit-content;
+}
+
+.body_content {
+    height: fit-content;
+}
+
+/* ############# Navigation bar styling ############# */
+.navbar>.main-menu {
+    text-align: center;
+    font-size: 1.5vw;
+    word-spacing: 5vw;
+    margin-top: 3%;
+}
+
+.navbar>.main-menu>.container {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5% 1.5%;
+    margin: auto;
+    font-weight: var(--text-regular);
+    border-radius: 5vw;
+    transition: var(--fast-transition);
+    width: 10vw;
+}
+
+.navbar>.main-menu>.container>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ############# Header styling ############# */
+.about_titlebar {
+    background-color: var(--theme-primary);
+    width: fit-content;
+    padding: 1vw 2vw;
+    color: white;
+    font-weight: var(--text-bold);
+    font-size: var(--large-size);
+    margin: 4vw auto;
+    margin-bottom: 0vw;
+    border-radius: 2vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+.header_links {
+    display: flex;
+    justify-content: center;
+}
+
+.header_links>.portfolio .portfolio_btn {
+    background-color: var(--theme-highlight);
+    border: none;
+    margin: 0.5vw 0.5vw;
+    padding: 1vw 3vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+    cursor: pointer;
+    font-size: var(--medium-size);
+    border-radius: 2vw;
+    transition: var(--turbo-transition);
+    border-color: rgb(255, 255, 255, 0);
+    border-style: solid;
+}
+
+.header_links>.portfolio:hover .portfolio_btn{
+    opacity: 0.7;
+    border-style: solid;
+    border-color: var(--theme-secondary);
+
+}
+
+.header_links>.resume .resume_btn{
+    background-color: var(--theme-highlight);
+    border: none;
+    margin: 0.5vw 0.5vw;
+    padding: 1vw 3vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+    cursor: pointer;
+    font-size: var(--medium-size);
+    border-radius: 2vw;
+    transition: var(--turbo-transition);
+    border-color: rgb(255, 255, 255, 0);
+    border-style: solid;
+}
+
+.header_links>.resume:hover .resume_btn {
+    opacity: 0.7;
+    border-style: solid;
+    border-color: var(--theme-secondary);
+}
+
+
+/* ############# Body content ############# */
+.body_content {
+    margin:auto;
+}
+
+.box_title {
+    font-size: var(--large-size);
+    margin: 1vw 6vw;
+    width: fit-content;
+}
+
+.box_content {
+    width: 40vw;
+    background-color: var(--theme-secondary);
+    padding: 1vw 1vw;
+    margin: 0.5vw 5vw;
+    font-size: var(--regular-size);
+    border-radius: 1vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+.blue_organic_shape {
+    position: absolute;
+    right: 7vw;
+    top: 21vw;
+}
+
+.blue_organic_shape_img {
+    width: 35vw;
+}
+
+.DK_img_div {
+    position: absolute;
+    right: 10vw;
+    top: 20vw;
+}
+
+.DK_image {
+    width: 30vw;
+}
+
+/* ############# Skills ############# */
+.skills_header {
+    background-color: var(--theme-primary);
+    font-size: var(--large-size);
+    font-weight: var(--text-bold);
+    color: white;
+    width: fit-content;
+    padding: 1vw 11vw;
+    margin: 1vw;
+    border-radius: 2vw;
+
+    position:absolute;
+    top: 52.5vw;
+    right: 7.5vw;
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+.skills_info {
+    position: absolute;
+    top: 58vw;
+    right: 19.5vw;
+    font-size: var(--regular-size);
+}
+
+.skills_toolbox {
+    display: grid;
+    grid-template-areas: "python    java      c         cpp          csharp      "
+                         "matlab    simulink  html      css          js          "
+                         "stm       kicad     rpi       arduino      soldering   "
+                         "jenkins   docker    git       pytest       tensorflow  "
+                         "pandas    sql       verilog   .            .        ";
+
+    width: fit-content;
+    position: absolute;
+    right: 4vw;
+    top: 62vw;
+}
+
+.skills_toolbox a {
+    text-decoration: none;
+    color: black
+}
+
+.grid_item {
+    /* Specify the width of the box here and any other parameters*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5vw 0.2vw;
+    padding: 0.3vw 0.1vw;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-radius: 1vw;
+    transition: var(--turbo-transition);
+}
+
+.grid_item:hover {
+    box-shadow: 5px 3px 5px var(--light-gray);
+    border-radius: 1vw;
+    border-color: var(--theme-secondary);
+    border-style: solid;
+}
+
+.grid_item>a>p {
+    margin: 0;
+    font-size: var(--medium-size);
+}
+
+.grid_item:hover a {
+    color: var(--theme-primary);
+}
+
+.skill_img {
+    height: 7.5vw;
+    width: auto;
+}
+
+.python_skill {
+    grid-area: python;
+    /* opacity: 0; */ /* If required to hide icon for now*/
+}
+
+.java_skill {
+    grid-area: java;
+}
+
+.c_skill {
+    grid-area: c;
+}
+
+.cpp_skill {
+    grid-area: cpp;
+}
+
+.csharp_skill {
+    grid-area: csharp;
+}
+
+.html_skill {
+    grid-area: html;
+}
+
+.css_skill {
+    grid-area: css;
+}
+
+.JS_skill {
+    grid-area: js;
+}
+
+.stm_skill {
+    grid-area: stm;
+}
+
+.matlab_skill {
+    grid-area: matlab;
+}
+
+.kicad_skill {
+    grid-area: kicad;
+}
+
+.arduino_skill {
+    grid-area: arduino;
+}
+
+.raspberry_skill {
+    grid-area: rpi;
+}
+
+.soldering_skill {
+    grid-area: soldering;
+}
+
+.docker_skill {
+    grid-area: docker;
+}
+
+.jenkins_skill {
+    grid-area: jenkins;
+}
+
+.git_skill {
+    grid-area: git;
+}
+
+.pytest_skill {
+    grid-area: pytest;
+}
+
+.tensorflow_skill {
+    grid-area: tensorflow;
+}
+
+.pandas_skill {
+    grid-area: pandas;
+}
+
+.simulink_skill {
+    grid-area: simulink;
+}
+
+.sql_skill {
+    grid-area: sql;
+}
+
+.verilog_skill {
+    grid-area: verilog;
+}
