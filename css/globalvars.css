@@ -1,0 +1,41 @@
+/***
+* Author: Dorian Knight
+* Date: May 30th 2025
+* Description: Global css variables used across multiple style sheets
+***/
+
+:root {
+    /* Used to store variables */
+
+    /* Colours */
+    --theme-primary: #486CFC;
+    --theme-secondary: #DBE5F3;
+    --theme-highlight: #AFF4C6;
+    --bash-green: #5C8E27;
+    --bash-blue: #345E91;
+    --light-gray: #BEBEBE;
+
+    /* Text Size */
+    --title-size: 6vw;
+    --subtitle-size: 4vw;
+    --large-size: 2.5vw;
+    --medium-size: 1.5vw;
+    --regular-size: 1vw;
+
+    /* Text weights/strengths */
+    --text-black: 900;
+    --text-extrabold: 800;
+    --text-bold: 700;
+    --text-semibold: 600;
+    --text-medium: 500;
+    --text-regular: 400;
+    --text-light: 300;
+    --text-extralight: 200;
+    --text-thin: 100;
+
+    /* Transition speeds */
+    --slow-transition: 1.5s;
+    --medium-transition: 1.0s;
+    --fast-transition: 0.5s;
+    --turbo-transition: 0.2s;
+}

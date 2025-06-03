@@ -1,0 +1,114 @@
+<!--
+Author: Dorian Knight
+Date: May 27th 2025
+Description: Dynamic project portfolio
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorian Knight Portfolio</title>
+    <link rel="stylesheet" href="/css/globalvars.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ################## Navbar ################## -->
+    <nav class="navbar">
+        <div class="link_container">
+            <a href="/index.html" class="link">
+                <div class="navbar_element" id="home" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                    Home
+                </div>
+            </a>
+        </div>
+
+        <div class="link_container">
+            <a href="/pages/about.html">
+                <div class="navbar_element" id="about" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                    About
+                </div>
+            </a>
+        </div>
+
+        <div class="link_container">
+            <a href="/pages/portfolio.html">
+                <div class="navbar_element" id="portfolio" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                    Portfolio
+                </div>
+            </a>
+        </div>
+
+        <div class="link_container">
+            <a href="/DK_resume" target="_blank">
+                <div class="navbar_element" id="resume" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                    Resume
+                </div>
+            </a>
+        </div>
+
+        <div class="link_container">
+            <a href="mailto:test@gmail.com">
+                <div class="navbar_element" id="contact" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                    Contact
+                </div>
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="header">Portfolio</div>
+
+    <!-- ################## Skill icons | Fed by AJAX respones ################## -->
+    <div class="skill_legend_section">
+        <div class="skill_icon_legend" id="skill_icon_legend"></div>
+    </div>
+    
+
+    <div class="content">
+        <!-- Uses AJAX to select which projects to show based on applied filters -->
+        <div class="portfolio" id="portfolio_content"></div>
+
+        <div class="filter_container">
+            <div class="filters" id="filters">
+                <div class="type_header" id="type_header">
+                    Filter by type
+                </div>
+                <div class="project_type">
+                    <!-- Clear type filter -->
+                    <div class="filter_clear" id="type_clear" onmouseenter="type_clear_hover(id)" onmouseleave="undo_type_clear_hover(id)" onclick="clear_all_types(id)">
+                        <div class="clear_icon" id="type_clear_icon"></div>
+                        Clear
+                    </div>
+
+                    <!-- Project Type filters | Fed by AJAX request -->
+                    <div id="type_filters"></div>
+                </div>
+
+                <div class="tag_header" id="tag_header">
+                    Filter by skill
+                </div>
+                <div class="project_tag">
+                    <!-- Tag clear -->
+                    <div class="filter_clear" id="tag_clear" onmouseenter="tag_clear_hover()" onmouseleave="undo_tag_clear_hover()" onclick="clear_all_tags()">
+                        <div class="clear_icon" id="tag_clear_icon"></div>
+                        Clear
+                    </div>
+
+                    <!-- Project tag filters | Fed by AJAX request -->
+                    <div id="tag_filters"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/JavaScript/portfolio.js"></script>
+</body>
+</html>

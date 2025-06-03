@@ -1,0 +1,234 @@
+/***
+* Author: Dorian Knight
+* Date: May 27th 2025
+* Description: Style sheet for portfolio.php
+***/
+
+body {
+    font-family: "Geist", sans-serif;
+    height: fit-content;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto 12vw;
+    grid-column-gap: 3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.header {
+    font-size: var(--subtitle-size);
+    background-color: var(--theme-primary);
+    padding: 0.5vw 5vw;
+    margin: 5vw auto;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    border-radius: 4vw;
+}
+
+
+/* ############# Skill icon legend styling ############# */
+.skill_legend_section {
+    margin: 1vw 1vw;
+}
+
+.skill_legend_title {
+    margin-left: 2vw;
+    padding-left: 0.5vw;
+    font-size: var(--large-size);
+    text-align: center;
+}
+.skill_icon_legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: var(--regular-size);
+}
+
+.legend_element {
+    padding: 0.5vw 0.5vw;
+    display: flex;
+    align-items: center;
+}
+
+.skill_img {
+    display: block;
+    width: 2vw;
+    aspect-ratio: auto;
+    margin: auto;
+    padding: 0vw 0.5vw;
+}
+
+/* ############# Portfolio content styling ############# */
+.row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1vw;
+    padding: 0.5vw 0;
+}
+
+.row>.indv_project {
+    border-style: solid;
+    border-color: var(--theme-secondary);
+    padding: 2vw;
+    border-radius: 2vw;
+    border-width: 1px;
+    transition: var(--fast-transition);
+}
+
+.row>.indv_project:hover {
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+.row>.indv_project>.project_title{
+    display: flex;
+    font-weight: var(--text-bold);
+    align-items: center;
+}
+
+.row>.indv_project>.project_title>.proj_title_icon {
+    width: 3vw;
+    padding-left: 1vw;
+}
+
+.row>.indv_project>.project_description {
+    display: flex;
+    font-size: var(--medium-size);
+    align-items: center;
+}
+
+.row>.indv_project>.project_description>.text {
+    height: 9vw;
+}
+
+.row>.indv_project>.project_description>div>.project_img {
+    height: 10vw;
+    aspect-ratio: auto;
+    padding: 0.5vw 0vw;
+}
+
+.row>.indv_project>.project_skill_images {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5vw;
+}
+
+.row>.indv_project>.project_skill_images>div>.skill_img {
+    width: 2vw;
+    padding-right: 0.3vw;
+    aspect-ratio: auto;
+}
+
+.row>.indv_project>.readmore>a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: fit-content
+}
+
+.row>.indv_project>.readmore>a>.readmore_arrow {
+    width: 2vw;
+    padding: 0vw 1vw;
+}
+
+.row>.indv_project>.readmore>a:hover {
+    text-decoration: underline;
+}
+
+/* ############# Filter bar styling ############# */
+
+.filter_container {
+    margin-top: 2vw;
+}
+
+.filters {
+    display: block;
+    position: sticky;
+    top: 5vw;
+    height: 85vh;
+    padding: 0vw 0vw;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+.filters>.type_header {
+    font-size: var(--medium-size);
+    font-weight: var(--text-bold);
+    top: 0%;
+    position: sticky;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+    padding-bottom: 0.5vw;
+    margin-bottom: 0.5vw;
+    transition: var(--fast-transition);
+}
+
+.filters>.tag_header {
+    margin-top: 2vh;
+    margin-bottom: 0.5vh;
+    font-size: var(--medium-size);
+    font-weight: var(--text-bold);
+    top: 0%;
+    position: sticky;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+    padding-bottom: 0.5vw;
+}
+
+.filters>.project_type {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.filters>.project_tag {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.filters>.project_type .type_selector {
+    font-size: var(--regular-size);
+    padding: 0.1vw 0.5vw;
+    margin: 0.1vw 0vw;
+    border: solid;
+    border-color: transparent;
+    transition: var(--fast-transition);
+}
+
+.filter_clear {
+    font-size: var(--regular-size);
+    font-weight: var(--text-light);
+    color: var(--light-gray);
+    padding: 0.1vw 0.5vw;
+    display: flex;
+    align-items: center;
+    transition: var(--fast-transition);
+    border: solid;
+    border-radius: 3vw;
+    border-color: transparent;
+}
+
+.clear_icon {
+    width: 1vw;
+    height: 2.0vh;
+    margin-right: 0.2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/remove_inactive.png");
+    transition: var(--fast-transition);
+}
+
+.filters>.project_tag .tag_selector {
+    font-size: var(--regular-size);
+    padding: 0.1vw 0.5vw;
+    margin: 0.1vw 0vw;
+    text-align: left;
+    border: solid;
+    border-color: transparent;
+    transition: var(--fast-transition);
+}

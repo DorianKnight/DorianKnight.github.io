@@ -1,0 +1,37 @@
+/***
+* Author: Dorian Knight
+* Date: May 30th 2025
+* Description: Style sheet controlling navbar style
+***/
+
+/* ############# Navigation bar styling ############# */
+.navbar {
+    text-align: center;
+    font-size: 1.5vw;
+    word-spacing: 5vw;
+    padding: 0.5vw 0vw;
+    top: 0vw;
+    position: sticky;
+    background-color: white;
+    transition: var(--fast-transition);
+    display: flex;
+    justify-content: center;
+}
+
+.link_container {
+    padding: 0vw 1vw;
+}
+
+.link_container a {
+    text-decoration: none;
+}
+
+.navbar .navbar_element {
+    padding: 0.5vw 1vw;
+    margin: auto;
+    font-weight: var(--text-regular);
+    border-radius: 5vw;
+    transition: var(--fast-transition);
+    width: 10vw;
+    color: black;
+}
