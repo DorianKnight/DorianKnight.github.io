@@ -10,6 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dorian Knight Portfolio</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/globalvars.css">
+        <link rel="stylesheet" href="css/navbar.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
         <!-- Fonts -->
@@ -19,33 +21,48 @@
     </head>
 
     <body>
-        <!-- Navigation bar -->
+        <!-- ################## Navbar ################## -->
         <nav class="navbar">
-            <div class="main-menu">
-                <div class="container" id="navContainer1" onmouseenter="navButtonEffect(id, 'navLink1')" onmouseleave="undoNavButtonEffect(id, 'navLink1')">
-                    <a class="navLink" id="navLink1" href="index.html">Home</a>
-                </div>
+            <div class="link_container">
+                <a href="/index.html" class="link">
+                    <div class="navbar_element" id="home" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                        Home
+                    </div>
+                </a>
+            </div>
 
-                <div class="container" id="navContainer2" onmouseenter="navButtonEffect(id, 'navLink2')" onmouseleave="undoNavButtonEffect(id, 'navLink2')">
-                    <a class="navLink" id="navLink2" href="pages/about.html">About</a>
-                </div>
+            <div class="link_container">
+                <a href="/pages/about.html">
+                    <div class="navbar_element" id="about" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                        About
+                    </div>
+                </a>
+            </div>
 
-                <div class="container" id="navContainer3" onmouseenter="navButtonEffect(id, 'navLink3')" onmouseleave="undoNavButtonEffect(id, 'navLink3')">
-                    <a class="navLink" id="navLink3" href="">Portfolio</a>
-                </div>
+            <div class="link_container">
+                <a href="/pages/portfolio.html">
+                    <div class="navbar_element" id="portfolio" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                        Portfolio
+                    </div>
+                </a>
+            </div>
 
-                <div class="container" id="navContainer4" onmouseenter="navButtonEffect(id, 'navLink4')" onmouseleave="undoNavButtonEffect(id, 'navLink4')">
-                    <a class="navLink" id="navLink4" href="">Resume</a>
-                </div>
+            <div class="link_container">
+                <a href="/DK_resume" target="_blank">
+                    <div class="navbar_element" id="resume" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                        Resume
+                    </div>
+                </a>
+            </div>
 
-                <div class="container" id="navContainer5" onmouseenter="navButtonEffect(id, 'navLink5')" onmouseleave="undoNavButtonEffect(id, 'navLink5')">
-                    <a class="navLink" id="navLink5" href="">Contact</a>
-                </div>
-
+            <div class="link_container">
+                <a href="mailto:test@gmail.com">
+                    <div class="navbar_element" id="contact" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
+                        Contact
+                    </div>
+                </a>
             </div>
         </nav>
-
-
 
         <!-- Title -->
         <div class="title">
@@ -65,7 +82,7 @@
                 </div>
 
                 <div class="resume">
-                    <a href="pages/resume.pdf" target="_blank">
+                    <a href="/Dorian_Knight__Software_Resume(May2025).pdf" target="_blank">
                         <button class="resume_btn">Resume</button>
                     </a>
                 </div>
@@ -133,6 +150,7 @@
         <div class="highlightedP1">test</div>
         <div class="highlightedP2">test</div>
 
-        <script src="JavaScript/main.js"></script>
+        <script src="JavaScript/globals.js"></script>
+        <script src="JavaScript/navbar.js"></script>
     </body>
 </html>

@@ -46,39 +46,9 @@
     --skill-container-size: 5vw;
 }
 
-body {
-    font-family: "Geist", sans-serif;
-    height: fit-content;
-}
-
 .body_content {
     height: fit-content;
 }
-
-/* ############# Navigation bar styling ############# */
-.navbar>.main-menu {
-    text-align: center;
-    font-size: 1.5vw;
-    word-spacing: 5vw;
-    margin-top: 3%;
-}
-
-.navbar>.main-menu>.container {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0.5% 1.5%;
-    margin: auto;
-    font-weight: var(--text-regular);
-    border-radius: 5vw;
-    transition: var(--fast-transition);
-    width: 10vw;
-}
-
-.navbar>.main-menu>.container>a {
-    color: black;
-    text-decoration: none;
-}
-
 
 /* ############# Header styling ############# */
 .about_titlebar {

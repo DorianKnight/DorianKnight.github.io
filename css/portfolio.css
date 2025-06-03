@@ -4,13 +4,6 @@
 * Description: Style sheet for portfolio.php
 ***/
 
-body {
-    font-family: "Geist", sans-serif;
-    height: fit-content;
-    margin-left: 0;
-    margin-right: 0;
-}
-
 .content {
     display: grid;
     grid-template-columns: auto 12vw;
