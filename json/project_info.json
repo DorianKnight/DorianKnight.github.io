@@ -1,8 +1,8 @@
 [
   {
     "proj_title": "Traffic light PCB",
-    "proj_icon": "/images/traffic-light.png",
-    "proj_img": "/images/Traffic Light PCB no floor2.png",
+    "proj_icon": "/images/project_images/traffic-light.png",
+    "proj_img": "/images/project_images/Traffic Light PCB no floor2.png",
     "proj_type": [
       "Electrical", 
       "Software"
@@ -18,8 +18,8 @@
 
   {
     "proj_title": "Project 2",
-    "proj_icon": "/images/led.png",
-    "proj_img": "/images/Arduino_Uno_-_R3-nobackground.png",
+    "proj_icon": "/images/project_images/led.png",
+    "proj_img": "/images/project_images/Arduino_Uno_-_R3-nobackground.png",
     "proj_type": [
       "Electrical", 
       "Software"
@@ -35,8 +35,8 @@
 
   {
     "proj_title": "Project 3",
-    "proj_icon": "/images/electric-motor.png",
-    "proj_img": "/images/motor_nobackground2.png",
+    "proj_icon": "/images/project_images/electric-motor.png",
+    "proj_img": "/images/project_images/motor_nobackground2.png",
     "proj_type": [
       "Mechanical",
       "Electrical"
@@ -51,8 +51,8 @@
 
   {
     "proj_title": "Project 4",
-    "proj_icon": "/images/donut.png",
-    "proj_img": "/images/donut_nobackground2.png",
+    "proj_icon": "/images/project_images/donut.png",
+    "proj_img": "/images/project_images/donut_nobackground2.png",
     "proj_type": [
       "Biomedical"
     ],
