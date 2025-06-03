@@ -305,8 +305,6 @@ function filterDropShadow() {
     setTimeout(filterDropShadow, 50);
 }
 
-filterDropShadow();
-
 // ############# Portfolio Content HTML generation ############# //
 
 function getAllProjects() {
@@ -329,7 +327,6 @@ function getAllProjects() {
         // TODO: Some sort of render HTML function
     }
 }
-getAllProjects();
 
 function filterProjectList(allProjects) {
     // Find out which filters are actively selected
@@ -502,12 +499,11 @@ function getTypeFilters() {
     for(let i=0; i<typeFilters.length; i++) {
         htmlString += `<div class='type_selector' id='${typeFilters[i]}' onmouseenter='proj_type_hover_effect(id)' onmouseleave='undo_proj_type_hover_effect(id)' onclick='proj_type_click_effect(id)'>${typeFilters[i]}</div>`;
     }
-    
+
     // Render HTML in browser
     typeFilterDiv = document.getElementById("type_filters");
     typeFilterDiv.innerHTML = htmlString;
 }
-getTypeFilters();
 
 function getTagFilters() {
     // Search skillicon_info.json and programmatically generate html structure for the skill filter section
@@ -521,7 +517,7 @@ function getTagFilters() {
     tagFilters = JSON.parse(tagFiltersRequest.responseText)[0];
     // Extract keys
     skillTags = Object.keys(tagFilters);
-    
+
     // Iterate over skill tags and generate html text
     htmlString = "";
     for(let i=0; i<skillTags.length; i++) {
@@ -531,8 +527,6 @@ function getTagFilters() {
     tagFilterDiv = document.getElementById("tag_filters");
     tagFilterDiv.innerHTML = htmlString;
 }
-
-getTagFilters();
 
 function getSkillImageMap() {
     let skillImgRequest = new XMLHttpRequest();
@@ -561,6 +555,43 @@ function printSkillLegend() {
     skill_legend_div.innerHTML = htmlString;
 }
 
-printSkillLegend();
+// ############# Auto apply filter from aboutme page ############# //
+function autoApplySkillFilter() {
+    // Read saved cookie to find out which skill was clicked
+    selectedSkillId = getSkillCookie();
 
-create_filter_button_objects()
+    // Find selected skill and apply filter
+    if (selectedSkillId.length != 0) {
+        tagKeys = Object.keys(list_of_tag_selectors);
+        for (let i=0; i<tagKeys.length; i++) {
+            if (tagKeys[i] == selectedSkillId) {
+                // Auto click the button
+                skill_click_effect(selectedSkillId);
+            }
+        }
+    }
+}
+
+function getSkillCookie() {
+    let selectedSkill = "";
+    let brokenCookie = decodeURIComponent(document.cookie).split('=');
+    if (brokenCookie[0] == "skill"){
+        selectedSkill = brokenCookie[1];
+    }
+
+    // Delete the cookie as it is no longer needed
+    oldDate = new Date()
+    oldDate.setTime(oldDate.getTime() - 1*1000*60*60*48);
+    document.cookie = `skill= ; expires=${oldDate}; path=/`;
+
+    return selectedSkill;
+}
+
+
+getAllProjects();
+getTypeFilters();
+getTagFilters();
+printSkillLegend();
+create_filter_button_objects();
+filterDropShadow();
+autoApplySkillFilter();
