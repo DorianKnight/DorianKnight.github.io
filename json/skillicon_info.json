@@ -1,0 +1,27 @@
+[
+  {
+    "Kicad":            "/images/kicad.png",
+    "Soldering":        "/images/soldering.png",
+    "Arduino":          "/images/arduino.png",
+    "Github":           "/images/github.png",
+    "Python":           "/images/skill_icons/python.png",
+    "Java":             "/images/skill_icons/java.png",
+    "C":                "/images/skill_icons/Clang.png",
+    "C++":              "/images/skill_icons/cpp.png",
+    "C#":               "/images/skill_icons/csharp.png",
+    "Matlab":           "/images/skill_icons/Matlab_logo.png",
+    "Simulink":         "/images/skill_icons/simulink.png",
+    "HTML":             "/images/skill_icons/html.png",
+    "CSS":              "/images/skill_icons/css.png",
+    "JavaScript":       "/images/skill_icons/JavaScript.png",
+    "STM":              "/images/skill_icons/st-microelectronics-1.png",
+    "Raspberry Pi":     "/images/skill_icons/raspberry-pi.png",
+    "Jenkins":          "/images/skill_icons/jenkins_logo.png",
+    "Docker":           "/images/skill_icons/docker.png",
+    "Pytest":           "/images/skill_icons/pytest.png",
+    "Tensorflow":       "/images/skill_icons/tensorflow.png",
+    "Pandas":           "/images/skill_icons/pandas.png",
+    "SQL":              "/images/skill_icons/sql.png",
+    "Verilog":          "/images/skill_icons/quartus.png"      
+  }
+]
