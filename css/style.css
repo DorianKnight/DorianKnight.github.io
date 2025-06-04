@@ -6,7 +6,9 @@
 
 /* ############# Header styling ############# */
 .title {
-    margin: 10% auto;
+    margin-inline: auto;
+    margin-top: 10vw;
+    margin-bottom: 2vw;
 }
 
 .header_container {
@@ -146,10 +148,17 @@ img {
     padding: 0% 0% 0% 1%;
 }
 
+/* ############# Mission statement styling ############# */
+.mission_statement {
+    font-size: var(--medium-size);
+    margin-inline: 23vw;
+}
+
 /* ############# About me styling ############# */
 .aboutme_section {
     display: flex;
     align-items: center;
+    margin-block: 17vw;
 }
 
 .aboutme_section>.aboutme_background {
@@ -198,6 +207,7 @@ img {
     margin: auto;
     width: 40vw;
     font-size: var(--regular-size);
+    text-align: left;
 }
 
 .aboutme_section>.aboutme_background>.aboutme_textbox>.readmore {
@@ -232,7 +242,7 @@ img {
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 25vw;
+    width: 26.2vw;
     right: 15%;
     position: absolute;
     /* right: 20%; */
@@ -252,6 +262,80 @@ img {
 
 .aboutme_background>.aboutme_textbox>.readmore:hover>a>.readmore_text{
     color: var(--theme-primary);
+    font-weight: var(--text-bold);
 }
 
-/* Note to self, make sure all sizes are parameterized using a variable so it can be easily changed*/
+.highlighted_projects_section {
+    width: 80vw;
+    margin-inline: auto;
+}
+
+/* ############# Highlighted projects styling ############# */
+.highlighted_projects_title {
+    font-size: var(--subtitle-size);
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 2vw;
+    background-color: var(--theme-primary);
+    color: white;
+    padding: 1vw 3vw;
+    font-weight: var(--text-regular);
+    border: solid;
+    border-radius: 1vw;
+}
+
+.highlighted_content {
+    width: fit-content;
+    margin-inline: auto;
+    font-size: var(--medium-size);
+
+}
+
+/* ############# Contact me styling ############# */
+.contact_me_section {
+    width: fit-content;
+    margin-inline: auto;
+    margin-block: 10vw;
+}
+
+.contact_me_title {
+    font-size: var(--subtitle-size);
+    color: white;
+    background-color: var(--theme-primary);
+    padding: 1vw 3vw;
+    border-radius: 1vw;
+    text-align: center;
+    margin-block: 3vw;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.contact_me_description {
+    font-size: var(--medium-size);
+}
+
+.button_container {
+    margin-inline: auto;
+    margin-block: 2vw;
+    width: fit-content;
+    transition: var(--fast-transition);
+}
+
+.button_container a{
+    text-decoration: none;
+}
+
+.contact_me_button {
+    font-size: var(--medium-size);
+    background-color: var(--theme-highlight);
+    border-color: transparent;
+    border-radius: 3vw;
+    padding: 1vw 3vw;
+    transition: var(--fast-transition);
+    color: black;
+}
+
+.contact_me_button:hover {
+    opacity: 0.75;
+    font-weight: var(--text-bold);
+}

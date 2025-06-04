@@ -33,4 +33,19 @@ function navDropShadow() {
     setTimeout(navDropShadow, 10);
 }
 
+function generateNavbarHTML() {
+    // Read navbar html file on github and write html structure
+    let resourceLocation = "https://raw.githubusercontent.com/DorianKnight/DorianKnight.github.io/refs/heads/main/pages/navbar.html";
+    let navbarRequest = new XMLHttpRequest();
+    navbarRequest.open("GET", resourceLocation, false); // Synchronous request
+    navbarRequest.send();
+
+    htmlString = navbarRequest.responseText;
+
+    // Write navbar html in navbar div
+    navbarDiv = document.getElementById("navbar_container");
+    navbarDiv.innerHTML = htmlString;
+}
+
+generateNavbarHTML();
 navDropShadow();

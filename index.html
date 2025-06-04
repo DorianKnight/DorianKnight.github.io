@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/globalvars.css">
         <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/project_layout.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
         <!-- Fonts -->
@@ -22,47 +23,7 @@
 
     <body>
         <!-- ################## Navbar ################## -->
-        <nav class="navbar">
-            <div class="link_container">
-                <a href="/index.html" class="link">
-                    <div class="navbar_element" id="home" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
-                        Home
-                    </div>
-                </a>
-            </div>
-
-            <div class="link_container">
-                <a href="/pages/about.html">
-                    <div class="navbar_element" id="about" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
-                        About
-                    </div>
-                </a>
-            </div>
-
-            <div class="link_container">
-                <a href="/pages/portfolio.html">
-                    <div class="navbar_element" id="portfolio" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
-                        Portfolio
-                    </div>
-                </a>
-            </div>
-
-            <div class="link_container">
-                <a href="/DK_resume" target="_blank">
-                    <div class="navbar_element" id="resume" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
-                        Resume
-                    </div>
-                </a>
-            </div>
-
-            <div class="link_container">
-                <a href="mailto:test@gmail.com">
-                    <div class="navbar_element" id="contact" onmouseenter="navButtonEffect(id)" onmouseleave="undoNavButtonEffect(id)">
-                        Contact
-                    </div>
-                </a>
-            </div>
-        </nav>
+        <div class="navbar_container" id="navbar_container"></div>
 
         <!-- Title -->
         <div class="title">
@@ -107,7 +68,10 @@
             </div>
         </div>
 
-
+        <!-- Brief description -->
+        <div class="mission_statement">
+            Relentlessly pursuing scalable solutions by synthesizing designs across <strong>Mechanical</strong>, <strong>Electrical</strong>, <strong>Software</strong> and <strong>Biomedical Engineering</strong> disciplines.
+        </div>
 
         <!-- About me summary -->
         <div class="aboutme_section">
@@ -123,8 +87,9 @@
                     </div>
 
                     <div class="details_textbox">
-                        <p>I'm a Mechatronics and Biomedical Engineering student from McMaster University with experience in software development.</p>
-                        <p>I previously interned for 16 months at <strong>L3 Harris Wescam</strong> in <strong>DevOps</strong> and <strong>Embedded software</strong> development.</p>
+                        I'm a Mechatronics and Biomedical Engineering student from McMaster University graduating in April 2026 with experience in software development. I previously interned for 16 months at <strong>L3 Harris Wescam</strong> in <strong>DevOps</strong> and <strong>Embedded software</strong> development.
+                        <br><br>
+                        I aim to use my enginerring knowledge to interface the nervous system with computers with the goal of treating neurodegenerative diseases and to augment our nervous system's capabilities. 
                     </div>
 
                     <div class="readmore">
@@ -142,15 +107,27 @@
             </div>
         </div>
 
-
-
-
         <!-- Highlighted projects -->
-        <div class="T1">Highlighted projects</div>
-        <div class="highlightedP1">test</div>
-        <div class="highlightedP2">test</div>
+        <div class="highlighted_projects_section">
+            <div class="highlighted_projects_title">Highlighted Projects</div>
+            <div class="highlighted_content" id="highlighted_content_div">
+                There is currently no content to highlight
+            </div>
+        </div>
+        
+        <div class="contact_me_section">
+            <div class="contact_me_title">Contact Me</div>
+            <div class="contact_me_description">Reach me at <strong>emaildorianknight(at)gmail.com</strong> or click the button below</div>
+            <div class="button_container">
+                <a href="mailto:emaildorianknight@gmail.com">
+                    <div class="contact_me_button">Start the conversation</div>
+                </a>
+            </div>
+        </div>
 
         <script src="JavaScript/globals.js"></script>
         <script src="JavaScript/navbar.js"></script>
+        <script src="JavaScript/gen_proj_html.js"></script>
+        <script src="JavaScript/script.js"></script>
     </body>
 </html>
