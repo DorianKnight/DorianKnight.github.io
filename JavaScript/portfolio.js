@@ -320,10 +320,12 @@ function getAllProjects() {
 
         // Update HTML of portfolio content
         projPortfolioHTML = generateProjectHTML(filteredProjects);
+        if (projPortfolioHTML == "") {
+            projPortfolioHTML = "<style>.no_projects {width: fit-content; margin: 5vw auto; font-size: var(--medium-size);}</style><div class='no_projects'>There are no projects that match the specified tags</div>";
+        }
+
         let portfolioContentDiv = document.getElementById("portfolio_content");
         portfolioContentDiv.innerHTML = projPortfolioHTML;
-        // TODO: I need to find a way of putting the filtered project list JSON onto the screen. This will probably need AJAX
-        // TODO: Some sort of render HTML function
     }
 }
 
