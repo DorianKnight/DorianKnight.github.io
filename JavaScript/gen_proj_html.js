@@ -46,7 +46,7 @@ function generateProjectHTML(projects) {
 
         // Read more
         htmlString +=   "<div class='readmore'>";
-        htmlString +=       "<a href=''>"; // TODO: Come back and link back to project page documentation
+        htmlString +=       `<a href='${indv_project.documentation}'>`;
         htmlString +=           "Read more";
         htmlString +=           "<img src='/images/readmore.png' alt='Read more arrow' class='readmore_arrow'>";
         htmlString +=       "</a>";
