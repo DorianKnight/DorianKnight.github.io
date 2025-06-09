@@ -26,6 +26,7 @@
 .row>.indv_project>.project_title{
     display: flex;
     font-weight: var(--text-bold);
+    font-size: var(--medium-size);
     align-items: center;
 }
 
@@ -45,10 +46,10 @@
 }
 
 .row>.indv_project>.project_description>div>.project_img {
-    height: 10vw;
-    width: auto;
-    aspect-ratio: auto;
+    height: 15vw;
+    width: 15vw;
     padding: 0.5vw 0vw;
+    object-fit: contain;
 }
 
 .row>.indv_project>.project_skill_images {
@@ -69,7 +70,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    font-size: var(--medium-size);
+    font-size: var(--regular-size);
 }
 
 .row>.indv_project>.readmore>a>.readmore_arrow {
