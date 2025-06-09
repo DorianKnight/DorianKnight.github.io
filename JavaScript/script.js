@@ -3,7 +3,7 @@
 // Description: Javascript to manage interactive events on main page
 
 /* ############# Dynamically load highlighted html projects ############# */
-const projects_to_highlight = ["Traffic light PCB", "Project 2"]
+const projects_to_highlight = ["Personal Portfolio", "Traffic light PCB"]
 
 function getProjectJSON() {
     // Input: projects to highlight as array of strings
