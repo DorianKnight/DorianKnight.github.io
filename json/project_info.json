@@ -13,7 +13,8 @@
       "Arduino", 
       "Github"
     ],
-    "proj_desc": "Designed and manufactured custom PCB using Kicad and JLCPCB. Apply voltage across R, Y, G pins and ground to control LEDs."
+    "proj_desc": "Designed and manufactured custom PCB using Kicad and JLCPCB. Apply voltage across R, Y, G pins and ground to control LEDs.",
+    "documentation": "#"
   },
 
   {
@@ -30,7 +31,8 @@
       "Arduino", 
       "Github"
     ],
-    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?"
+    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?",
+    "documentation": "#"
   },
 
   {
@@ -46,7 +48,8 @@
       "Soldering", 
       "Github"
     ],
-    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?"
+    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?",
+    "documentation": "#"
   },
 
   {
@@ -62,6 +65,24 @@
       "Github", 
       "Arduino"
     ],
-    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?"
+    "proj_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequatur quidem deleniti doloremque animi enim sequi blanditiis est illo?",
+    "documentation": "#"
+  },
+
+  {
+    "proj_title": "Personal Portfolio",
+    "proj_icon": "/images/project_images/web-development.png",
+    "proj_img": "/images/project_images/project_16_personal_portfolio.png",
+    "proj_type": [
+      "Software"
+    ],
+    "proj_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Github"
+    ],
+    "proj_desc": "Personal portfolio website coded in HTML, CSS and JavaScript. Hosted on GitHub pages.",
+    "documentation": "/project_documentation/Project_16__Personal_Portfolio_Website.pdf"
   }
 ]
