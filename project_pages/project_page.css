@@ -1,0 +1,107 @@
+/* Author: Dorian Knight
+ * Date: June 9th 2025
+ * Description: Style sheet for project portfolio page */
+
+ /* @TODO: Make this css page common to all project portfolios */
+
+.project_banner {
+    object-fit: cover;
+    width: 100%;
+    height: 15vw;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: var(--light-gray);
+}
+
+.project_title {
+    margin-top: 3vw;
+    margin-bottom: 0vw;
+    margin-inline: auto;
+    padding: 2vw 3vw;
+    background-color: var(--theme-primary);
+    width: fit-content;
+    color: white;
+    border-radius: 3vw;
+    font-size: var(--subtitle-size);
+    font-weight: var(--text-semibold);
+}
+
+.project_subtitle {
+    width:fit-content;
+    margin-inline: auto;
+    margin-top: 0vw;
+    margin-bottom: 3vw;
+    padding: 1vw 1vw;
+    font-size: var(--medium-size);
+}
+
+/* ########## Content styling ########## */
+
+.page_content {
+    display: grid;
+    grid-template-columns: auto 20vw;
+    grid-column-gap: 3vw;
+    padding-inline: 3vw;
+}
+
+.page_header {
+    font-size: var(--large-size);
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+.descript_content {
+    font-size: var(--regular-size);
+}
+
+.documentation_link {
+    text-decoration: none;
+    color: black;
+}
+
+.documentation_button {
+    font-size: var(--regular-size);
+    width: fit-content;
+    padding: 0.5vw 1vw;
+    background-color: var(--theme-highlight);
+    border-radius: 3vw;
+    border: solid;
+    border-color: transparent;
+    transition: var(--fast-transition);
+}
+
+.documentation_button:hover {
+    opacity: 0.75;
+    border-color: var(--theme-secondary);
+    font-weight: var(--text-semibold);
+    box-shadow: 5px 3px 5px var(--light-gray);
+}
+
+
+/* ########## Skill bar styling ########## */
+.skills_tab {
+    position: sticky;
+    top: 5vw;
+    height: fit-content;
+}
+
+.skill_header {
+    font-size: var(--large-size);
+    text-align: center;
+}
+
+.all_proj_skills {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.skill_img_div {
+    display: flex;
+    align-items: center;
+}
+
+.skill_image {
+    width: 5vw;
+    aspect-ratio: auto;
+    padding: 0.2vw 1vw;
+}
