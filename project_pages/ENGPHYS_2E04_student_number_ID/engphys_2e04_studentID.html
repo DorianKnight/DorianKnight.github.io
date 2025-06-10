@@ -1,0 +1,100 @@
+<!--
+    Author: Dorian Knight
+    Date: June 10th 2025
+    Description: html page detailing engphys 2e04 summative project -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student number FSM digital design</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/globalvars.css">
+    <link rel="stylesheet" href="/project_pages/project_page.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ################## Navbar ################## -->
+    <div class="navbar_container" id="navbar_container"></div>
+
+    <div class="project_image_banner">
+        <img src="/project_banners/student_number_FSM_banner.png" alt="Project banner image" class="project_banner">
+    </div>
+
+    <div class="project_title">Student number finite state machine</div>
+    <div class="project_subtitle">Project description and documentation</div>
+    <div class="page_content">
+        <div class="project_description">
+            <div class="page_header project_overview">Overview</div>
+            <div class="descript_content overview_desc">
+                I designed and built a finite state machine that displays my student number 
+                on a seven-segment display. This project was the culminating design project 
+                in a series of curriculum units that taught me the basics of analog and digital circuits:
+                <ul>
+                    <li>AC phasors</li>
+                    <li>Capacitance and RC circuits</li>
+                    <li>Power factor</li>
+                    <li>Boolean logic</li>
+                    <li>Finite state machines (FSM)</li>
+                </ul>
+                I simulated my digital logic using NI Multisim and built the circuit physically 
+                using breadboards, JK flip-flops, primitive logic gates, a seven-segment display 
+                and a seven-segment decoder chip. <br>
+                <a href="https://youtu.be/ttw1BfveHq8" target="_blank">Video explanation</a>
+            </div>
+
+            <div class="page_header project_purpose">Purpose</div>
+            <div class="descript_content purpose_desc">
+                The purpose of the project was to design a finite state machine (FSM) that would 
+                iterate through a series of states that mapped to my student ID. Each flip-flop 
+                stored an individual bit and the combination of four flip-flops served to represent 
+                every individual number in my student ID. Upon each clock cycle, the combinational 
+                logic would take the current state as input and output the signals to J and !K pins 
+                in order to advance the FSM into the next state.
+                <br><br>
+                Special attention was paid to minimize the gate count by Karnaugh mapping both the 
+                product of sums (POS) and sum of products (SOP) implementations as well as selectively 
+                utilizing De Morgan’s law to implement certain sections exclusively using NAND gates. 
+            </div>
+
+            <div class="page_header project_outcomes">Outcomes</div>
+            <div class="descript_content outcomes_desc">
+                I successfully implemented my student number FSM using JK flip-flops and primitive logic 
+                gates. The simulated circuit and physical build successfully cycled through all individual 
+                student numbers in the correct order.<br>
+                <a href=" https://youtu.be/bVT8jeTuHBg" target="_blank">Functional circuit demonstration</a>
+            </div>
+
+            <div class="page_header documentation">Documentation</div>
+            <div>
+                <a href="/project_pages/ENGPHYS_2E04_student_number_ID/DP-knight_d.pdf" target="_blank" class="documentation_link">
+                    <div class="documentation_button">Open PDF</div>
+                </a>
+            </div>
+        </div>
+        <div class="skills_tab">
+            <div class="skill_header">Skills used</div>
+            <div class="all_proj_skills">
+                <div class="skill_img_div">
+                    <img src="/images/skills_icons/ni_multisim.png" alt="" class="skill_image">
+                    NI Multisim
+                </div>
+                <div class="skill_img_div">
+                    <img src="/images/skills_icons/digital_logic.png" alt="" class="skill_image">
+                    Digital logic design
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/JavaScript/globals.js"></script>
+    <script src="/JavaScript/navbar.js"></script>
+</body>
+</html>
