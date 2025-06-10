@@ -182,7 +182,7 @@
                          "matlab    simulink  html      css          js          "
                          "stm       kicad     rpi       arduino      soldering   "
                          "jenkins   docker    git       pytest       tensorflow  "
-                         "pandas    sql       verilog   .            .        ";
+                         "pandas    sql       verilog   digital_log  multisim    ";
 
     width: fit-content;
     position: absolute;
@@ -320,4 +320,12 @@
 
 .verilog_skill {
     grid-area: verilog;
+}
+
+.digital_logic_skill {
+    grid-area: digital_log;
+}
+
+.multisim_skill {
+    grid-area: multisim;
 }
