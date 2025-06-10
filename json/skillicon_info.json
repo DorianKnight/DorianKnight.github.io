@@ -24,6 +24,6 @@
     "SQL":              "/images/skills_icons/sql.png",
     "Verilog":          "/images/skills_icons/quartus.png",
     "Digital logic":    "/images/skills_icons/digital_logic.png",
-    "Multisim":         "/images/skill_icons/ni_multisim.png"
+    "NI Multisim":         "/images/skill_icons/ni_multisim.png"
   }
 ]

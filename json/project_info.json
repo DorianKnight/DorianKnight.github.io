@@ -96,7 +96,7 @@
     ],
     "proj_skills": [
       "NI Multisim",
-      "Digital logic design"
+      "Digital logic"
     ],
     "proj_desc": "Used digital logic synthesis to create a finite state machine from flip-flops and primitive logic gates that displays my student number on a seven-segment display.",
     "documentation": "/project_pages/ENGPHYS_2E04_student_number_ID/engphys_2e04_studentID.html"
