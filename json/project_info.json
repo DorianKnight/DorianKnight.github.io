@@ -84,5 +84,21 @@
     ],
     "proj_desc": "Personal portfolio website coded in HTML, CSS and JavaScript. Hosted on GitHub pages.",
     "documentation": "/project_pages/project_16_portfolio/project_portfolio.html"
+  },
+
+  {
+    "proj_title": "Student ID finite state machine",
+    "proj_icon": "/images/project_images/ID_card_icon.png",
+    "proj_img": "/images/project_images/student_number_FSM.png",
+    "proj_type": [
+      "Electrical",
+      "Software"
+    ],
+    "proj_skills": [
+      "NI Multisim",
+      "Digital logic design"
+    ],
+    "proj_desc": "Used digital logic synthesis to create a finite state machine from flip-flops and primitive logic gates that displays my student number on a seven-segment display.",
+    "documentation": "/project_pages/ENGPHYS_2E04_student_number_ID/engphys_2e04_studentID.html"
   }
 ]
