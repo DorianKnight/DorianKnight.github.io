@@ -100,5 +100,20 @@
     ],
     "proj_desc": "Used digital logic synthesis to create a finite state machine from flip-flops and primitive logic gates that displays my student number on a seven-segment display.",
     "documentation": "/project_pages/ENGPHYS_2E04_student_number_ID/engphys_2e04_studentID.html"
+  },
+
+  {
+    "proj_title": "Vitamin-C | C Language Libraries",
+    "proj_icon": "/images/project_images/orange.png",
+    "proj_img": "/images/project_images/vitamin-c.png",
+    "proj_type": [
+      "Software"
+    ],
+    "proj_skills": [
+      "C",
+      "Github"
+    ],
+    "proj_desc": "C language libraries implementing common data structures and algorithms. Abstracts away low-level memory management and error handling.",
+    "documentation": "/project_pages/project_28_vitamin_c/vitamin_c.html"
   }
 ]
