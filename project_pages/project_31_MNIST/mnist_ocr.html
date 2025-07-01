@@ -1,0 +1,88 @@
+<!--
+    Author: Dorian Knight
+    Date: July 1st 2025
+    Description: MNIST Handwritten Digit Classification details page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST Handwritten Digit Classification</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/globalvars.css">
+    <link rel="stylesheet" href="/project_pages/project_page.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ################## Navbar ################## -->
+    <div class="navbar_container" id="navbar_container"></div>
+
+    <div class="project_image_banner">
+        <img src="/project_banners/MNIST_dataset.png" alt="Project banner image" class="project_banner">
+    </div>
+
+    <div class="project_title">MNIST Handwritten Digit Classification</div>
+    <div class="project_subtitle">Project description and documentation</div>
+    <div class="page_content">
+        <div class="project_description">
+            <div class="page_header project_overview">Overview</div>
+            <div class="descript_content overview_desc">
+                This project was an introductory investigation into how machine learning works, 
+                what it’s good for and how to use it. Using TensorFlow, I was able to create a 
+                feedforward artificial neural network model that classifies handwritten digits 
+                from the MNIST (Modified National Institute of Standards and Technology) database.
+                <a href="https://github.com/DorianKnight/MNIST_Handwritten_Digit_Classification" target="_blank">[Link to GitHub repo]</a>
+            </div>
+
+            <div class="page_header project_purpose">Purpose</div>
+            <div class="descript_content purpose_desc">
+                The project’s purpose was to start understanding how neural networks are made, 
+                trained and evaluated. By experimenting with TensorFlow’s model libraries, 
+                I was able to get a taste of what machine learning is capable of.
+            </div>
+
+            <div class="page_header project_outcomes">Outcomes</div>
+            <div class="descript_content outcomes_desc">
+                By using TensorFlow’s libraries in Python, I was able to create an artificial 
+                neural network that can classify handwritten digits from 0-9 with up to 95.84% accuracy.
+                <br>
+                I also experimented with varying the number of epochs used in model training and found 
+                that more epochs aren’t always better. While an increase in training epochs resulted in 
+                plateauing accuracy, loss continued to increase seemingly exponentially. This suggests 
+                excessive epochs lead to model overfitting as the model learns the significant differences 
+                but also learns the training dataset noise, which is undesirable for model generalizability.
+            </div>
+
+            <div class="page_header documentation">Documentation</div>
+            <div>
+                <a href="/project_pages/project_31_MNIST/Project_31__MNIST_Handwritten_Digit_Classification.pdf" target="_blank" class="documentation_link">
+                    <div class="documentation_button">Open PDF</div>
+                </a>
+            </div>
+        </div>
+        <div class="skills_tab">
+            <div class="skill_header">Skills used</div>
+            <div class="all_proj_skills">
+                <div class="skill_img_div">
+                    <img src="/images/skills_icons/python.png" alt="" class="skill_image">
+                    Python
+                </div>
+                <div class="skill_img_div">
+                    <img src="/images/skills_icons/tensorflow.png" alt="" class="skill_image">
+                    TensorFlow
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/JavaScript/globals.js"></script>
+    <script src="/JavaScript/navbar.js"></script>
+</body>
+</html>

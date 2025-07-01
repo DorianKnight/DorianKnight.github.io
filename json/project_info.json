@@ -45,5 +45,20 @@
     ],
     "proj_desc": "C language libraries implementing common data structures and algorithms. Abstracts away low-level memory management and error handling.",
     "documentation": "/project_pages/project_28_vitamin_c/vitamin_c.html"
+  },
+
+  {
+    "proj_title": "MNIST Handwritten Digit Classification",
+    "proj_icon": "/images/project_images/deep-learning.png",
+    "proj_img": "/images/project_images/MNIST_dataset.png",
+    "proj_type": [
+      "Software"
+    ],
+    "proj_skills": [
+      "Python",
+      "Tensorflow"
+    ],
+    "proj_desc": "An investigation into the impact of epoch quantity on multilayered artificial neural networks to classify handwritten digits from MNIST dataset.",
+    "documentation": "/project_pages/project_31_MNIST/mnist_ocr.html"
   }
 ]
