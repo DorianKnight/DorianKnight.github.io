@@ -1,4 +1,4 @@
 # DorianKnight.github
-![image](https://github.com/user-attachments/assets/2624c131-fb0c-4290-8574-0fec4d6ef26e)
+<img width="2024" height="1070" alt="image" src="https://github.com/user-attachments/assets/42a83b75-2819-436b-af8a-520592b5c25e" />
 Personal portfolio website hosted by github pages.
 Showcases my skills and driving interest.
